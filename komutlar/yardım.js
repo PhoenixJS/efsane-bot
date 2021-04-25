@@ -31,8 +31,8 @@ let eklenti = new Discord.MessageEmbed()
 .addField( `**╔═══════════◥◣❖◢◤════════════╗**`,
     ` **║ Bilgilendirme.**
 **║ [Botu Davet Et](https://discord.com/oauth2/authorize?client_id=778778531018571776&scope=bot&permissions=8)**
-**║ [Destek Sunucusu](https://discord.gg/3T5SHUD)**
-**║ [Bot Sitesi](https://beautiful-sheer-session.glitch.me/index.html)**
+**║ [Destek Sunucusu](https://discord.gg/aloysha)**
+**║ [Bot Sitesi]()**
 **╚═══════════◥◣❖◢◤════════════╝**
    `)
 .addField(`<a:yildiz:778774342640730112> __Kayıt Komutları__`,` \`s*kayıt\``,true)
