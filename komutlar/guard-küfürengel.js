@@ -5,10 +5,11 @@ const db = require('croxydb');
 var ayarlar = require('../ayarlar.json');
 
 exports.run = async (client, message) => {
+let prefix = ayarlar.prefix
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -31,8 +32,8 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 	let args = message.content.split(' ').slice(1);
 	const secenekler = args.slice(0).join(' ');
 
-	if(secenekler.length < 1) return message.reply(`**s*küfür-engelle aç** veya **s*küfür-engelle kapat** yazınz `);
-	//if(secenekler === "aç" || "kapat") return message.channel.send(errembed);
+	if(secenekler.length < 1) return message.reply(`**${prefix}küfür-engelle aç** veya **${prefix}küfür-engelle kapat** yazınz `);
+	//if(secenekler === "aç" || "kapat") return message.channel.send(errembed)
 
   if (secenekler !== "aç" && secenekler !== "kapat" && secenekler !== "on" && secenekler !== "off") return message.reply(`**q!küfür-engelle aç** veya **q!küfür-engelle kapat** yazınz `)
   
@@ -42,7 +43,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     
 		  const embed = new Discord.MessageEmbed()
     .setColor('#f6ff00')
-    .setDescription(`Küfür Engeli Başarıyla açıldı\nKüfür engelini kapatmak isterseniz **s*küfür-engel kapat** yazmanız yeterlidir.`)
+    .setDescription`Küfür Engeli Başarıyla açıldı\nKüfür engelini kapatmak isterseniz **s*küfür-engel kapat** yazmanız yeterlidir.`
     message.channel.send(embed)
     let kufurEngel = JSON.parse(fs.readFileSync("././jsonlar/kufurEngelle.json", "utf8"));
  if(!kufurEngel[message.guild.id]){

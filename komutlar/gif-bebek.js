@@ -28,7 +28,7 @@ let result = Math.floor((Math.random() * replies.length));
 
 let gifembed = new Discord.MessageEmbed()
 
-.setTitle("<a:kral:778787824018653205> Baby Gif <a:kral:778787824018653205>;")
+.setTitle("Baby Gif ")
     
 .setColor("#f6ff00")
 

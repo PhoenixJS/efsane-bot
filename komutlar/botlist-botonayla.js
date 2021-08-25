@@ -42,7 +42,7 @@ let westralogkanal = await db.fetch(`westralogkanal_${message.guild.id}`, kanal3
     .setTimestamp()
     .setDescription(`**<@${sahip}> adlı kişinin <@${botisim}> adlı botu onaylandı. \nOnaylayan yetkili:** ${message.author}`)
 		client.channels.cache.get(log).send(westrabumbeyyyy);
-		message.channel.send(`<a:okk:778774339259859002> Botu onayladınız.**`).then(x => x.delete({timeout: 3000}))
+		message.channel.send(`**Botu onayladınız.**`).then(x => x.delete({timeout: 3000}))
 };
 
 exports.conf = {

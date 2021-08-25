@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
 if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<a:siren:778777832976416778> Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
   let kontrol = await db.fetch(`dil_${message.guild.id}`);
   if (kontrol == "spallers") {
     let kanal = message.mentions.channels.first();
@@ -29,7 +29,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
       const embed = new Discord.MessageEmbed()
         .setColor('#f6ff00')
         .setFooter(client.user.username, client.user.avatarURL())
-        .setDescription(`<a:siren:778777832976416778> Lütfen bir log kanalı etiketleyiniz!`);
+        .setDescription(` Lütfen bir log kanalı etiketleyiniz!`);
       message.channel.send(embed);
       return;
     }
@@ -37,7 +37,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     const embed = new Discord.MessageEmbed()
         .setColor('#f6ff00')
       .setFooter(client.user.username, client.user.avatarURL())
-      .setDescription(`<a:tmdir:778774341357797378> Ban koruma log kanalı; ${kanal} olarak ayarlandı!`);
+      .setDescription(` Ban koruma log kanalı; ${kanal} olarak ayarlandı!`);
     message.channel.send(embed);
     return;
   } else {
@@ -46,7 +46,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
       const embed = new Discord.MessageEmbed()
       .setColor('#f6ff00')
         .setFooter(client.user.username, client.user.avatarURL())
-        .setDescription(`<a:siren:778777832976416778> Lütfen bir log kanalı etiketleyiniz!`);
+        .setDescription(` Lütfen bir log kanalı etiketleyiniz!`);
       message.channel.send(embed);
       return;
     }
@@ -54,7 +54,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     const embed = new Discord.MessageEmbed()
       .setColor('#f6ff00')
       .setFooter(client.user.username, client.user.avatarURL())
-      .setDescription(`<a:tmdir:778774341357797378> Ban koruma log kanalı; ${kanal} olarak ayarlandı!`);
+      .setDescription(`> Ban koruma log kanalı; ${kanal} olarak ayarlandı!`);
     message.channel.send(embed);
     return;
   }

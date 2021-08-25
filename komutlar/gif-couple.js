@@ -27,7 +27,7 @@ let result = Math.floor((Math.random() * replies.length));
 
 let gifembed = new Discord.MessageEmbed()
 
-.setTitle("<a:kral:778787824018653205> Couple Gif <a:kral:778787824018653205> ;")
+.setTitle("Couple Gif  ;")
 
 .setColor("#f6ff00")
 

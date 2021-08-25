@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
 if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<a:siren:778777832976416778> Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`** Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.**`);
   let kontrol = await db.fetch(`dil_${message.guild.id}`);
   if (kontrol == "agayokaga") {// BU ALTYAPI TAMAMEN westra.dcw ʷʰʸ#9999 VE ⍭ Yiğit#6523 AİTTİR
     let kanal = await db.fetch(`bank_${message.guild.id}`)
@@ -29,7 +29,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
       const embed = new Discord.MessageEmbed()
         .setColor('#f0ff00')
         .setFooter(client.user.username, client.user.avatarURL())
-        .setDescription(`<a:siren:778777832976416778> Ban koruma sistemi zaten ayarlanmamış!`);
+        .setDescription(`** Ban koruma sistemi zaten ayarlanmamış!**`);
       message.channel.send(embed);
       return;
     }
@@ -37,7 +37,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     const embed = new Discord.MessageEmbed()
         .setColor('#f0ff00')
       .setFooter(client.user.username, client.user.avatarURL())
-      .setDescription(`<a:siren:778777832976416778> Ban koruma sistemi sıfırlandı!`);
+      .setDescription(`**Ban koruma sistemi sıfırlandı!**`);
     message.channel.send(embed);
     return;
   } else {
@@ -46,7 +46,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
       const embed = new Discord.MessageEmbed()
         .setColor('#f0ff00')
         .setFooter(client.user.username, client.user.avatarURL())
-        .setDescription(`<a:siren:778777832976416778> Ban koruma sistemi zaten ayarlanmamış!`);
+        .setDescription(`** Ban koruma sistemi zaten ayarlanmamış!**`);
       message.channel.send(embed);
       return;
     }
@@ -54,7 +54,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     const embed = new Discord.MessageEmbed()
         .setColor('#f0ff00')
       .setFooter(client.user.username, client.user.avatarURL())
-      .setDescription(`<a:siren:778777832976416778> Ban koruma sistemi sıfırlandı!`);
+      .setDescription(`** Ban koruma sistemi sıfırlandı!**`);
     message.channel.send(embed);
     return;
   }

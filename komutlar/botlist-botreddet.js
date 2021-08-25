@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
   let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -28,14 +28,14 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   let westrabasvurugidecekkanal = await db.fetch(`westrabasvurugidecekkanal_${message.guild.id}`, kanal2.id);
 let westralogkanal = await db.fetch(`westralogkanal_${message.guild.id}`, kanal3.id);
 let westrabotlistyetkilisi = db.fetch(`westrabotlistyetkilirol_${message.guild.id}`)
-   if(!message.member.roles.cache.has(westrabotlistyetkilisi)) return message.channel.send(`<a:siren:778777832976416778> Bu komutu kullanabilmen için <@&${westrabotlistyetkilisi}> adlı role sahip olman lazım!`)
+   if(!message.member.roles.cache.has(westrabotlistyetkilisi)) return message.channel.send(`** Bu komutu kullanabilmen için <@&${westrabotlistyetkilisi}> adlı role sahip olman lazım!**`)
 	let botisim = args[0]
   let sahip = args[1]
   let sebep = args.slice(2).join(' ');
 	let log = westralogkanal // Bot Eklendi / Onaylandı / Rededildi Kanalı
-	if (!botisim) return message.channel.send(`<a:siren:778777832976416778> Botun ID'sini yazmalısın.`).then(x => x.delete({timeout: 3000}))
-      if (!sahip) return message.channel.send(`<a:siren:778777832976416778> Bot sahibinin ID'sini yazmalısın.`).then(x => x.delete({timeout: 3000}))
-   if (!sebep) return message.channel.send(`<a:siren:778777832976416778> Botun onaylanmama sebebini yazmalısın.`).then(x => x.delete({timeout: 3000}))
+	if (!botisim) return message.channel.send(`** Botun ID'sini yazmalısın.**`).then(x => x.delete({timeout: 3000}))
+      if (!sahip) return message.channel.send(`** Bot sahibinin ID'sini yazmalısın.**`).then(x => x.delete({timeout: 3000}))
+   if (!sebep) return message.channel.send(`** Botun onaylanmama sebebini yazmalısın.**`).then(x => x.delete({timeout: 3000}))
   message.delete()
    const westrabumbeyyyy = new Discord.MessageEmbed()
     .setColor(`RED`)

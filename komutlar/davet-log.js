@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
   let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
  .setColor(`RED`)
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
 
@@ -24,25 +24,25 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 }
 
  if (!message.member.hasPermission('ADMINISTRATOR'))
-        return message.channel.send('<a:siren:778777832976416778> **Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın! **')
+        return message.channel.send('** **Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın! ****')
 	
-    if(!args[0])  return message.channel.send(new discord.MessageEmbed().setColor('#f6ff00').setDescription('> **Davet-Log Sisteminde ne yapmak istediğini belirtmedin** <a:loading:779796972533710868> \n> `s*davet-log ayarla #kanal` **Davet-Log Sistemini Ayarlar** \n> `q!davet-log sıfırla` **Davet-Log Sistemini Sıfırlar.**'))
+    if(!args[0])  return message.channel.send(new discord.MessageEmbed().setColor('#f6ff00').setDescription('> **Davet-Log Sisteminde ne yapmak istediğini belirtmedin** \n> `s*davet-log ayarla #kanal` **Davet-Log Sistemini Ayarlar** \n> `q!davet-log sıfırla` **Davet-Log Sistemini Sıfırlar.**'))
 
 if (args[0] === 'sıfırla') {
   let seviyelog = db.fetch(`davetlog_${message.guild.id}`)
-  if (!seviyelog) return message.channel.send(`<a:siren:778777832976416778> Davet Logu Zaten Ayarlanmadığı İçin Sıfırlanamaz! `)
-  message.channel.send(`<a:tmdir:778774341357797378> | **Davet Log Kanalı Başarıyla Sıfırlandı!**`)
+  if (!seviyelog) return message.channel.send(`Davet Logu Zaten Ayarlanmadığı İçin Sıfırlanamaz! `)
+  message.channel.send(` | **Davet Log Kanalı Başarıyla Sıfırlandı!**`)
   db.delete(`davetlog_${message.guild.id}`)
   return;
 }
 
   if (args[0] === 'ayarla') {
 let kanal = message.mentions.channels.first()
-if(!kanal) return message.channel.send(`<a:siren:778777832976416778> | **Davet Logu Belirtmelisin!** `)
+if(!kanal) return message.channel.send(` | **Davet Logu Belirtmelisin!** `)
 
 db.set(`davetlog_${message.guild.id}`, kanal.id)
 
-message.channel.send(`<a:tmdir:778774341357797378> | **Davet Logunu ${kanal} Olarak Ayarladım!**`)
+message.channel.send(` | **Davet Logunu ${kanal} Olarak Ayarladım!**`)
   }
 }
 exports.conf = {
