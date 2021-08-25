@@ -32,7 +32,7 @@ if(!frenzy_kanal || !frenzy_tag) return message.reply(`**Ototag sistemini ayarla
   
 db.set(`Frenzy?Code?Ototag_${message.guild.id}`,frenzy_tag) 
 db.set(`Frenzy?Code?OtotagKanal_${message.guild.id}`,frenzy_kanal.id)
-message.channel.send(`<a:tmdir:778774341357797378> | **Ototag aktif edildi!**\n<a:tmdir:778774341357797378> | **Yeni gelen kullanıcılara **${frenzy_tag}** vereceğim.**`)
+message.channel.send(` | **Ototag aktif edildi!**\n | **Yeni gelen kullanıcılara **${frenzy_tag}** vereceğim.**`)
 };  
 exports.conf = {
   enabled: false, 

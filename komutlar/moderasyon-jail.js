@@ -5,6 +5,7 @@ const ayarlar = require('../ayarlar.json');
 const prefix = ayarlar.prefix;
 
 module.exports.run = async (client, message, args) => {
+let prefix = ayarlar.prefix
   if(db.fetch(`bakim`)) {
   const bakim = new Discord.MessageEmbed()
   .setColor("#FF56FF")
@@ -30,7 +31,7 @@ if(!yetkili) return message.channel.send(`Jail yetkilisi ayarlı değil.`)
 let kanal = message.guild.channels.cache.get(data3)
 if(!kanal) return message.channel.send(`Jail log kanalı ayarlı değil.`)
 
-  if (!message.member.roles.cache.has(`${yetkili.id}`)) return message.channel.send(`**${ayarlar.prefix}jail** isimli komutu kullanabilmek için ${yetkili} rolüne sahip olman gerekiyor.`)
+  if (!message.member.roles.cache.has(`${yetkili.id}`)) return message.channel.send(`**${prefix}jail** isimli komutu kullanabilmek için ${yetkili} rolüne sahip olman gerekiyor.`)
   let kişi = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
   if(!kişi) return message.channel.send(`Kimi susturacaksın? Etiketlemeyi unutma.`)
   if(kişi.hasPermission("MANAGE_GUILD")) return message.channel.send(`Olmaz. Bu kişiyi susturamam.`)

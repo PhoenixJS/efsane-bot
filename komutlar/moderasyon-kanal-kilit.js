@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
       .setAuthor(message.author.username, message.author.avatarURL())
       .addField(
         ":warning: Uyarı :warning:",
-        "Spallers | `kilit` adlı komutu özel mesajlarda kullanamazsın."
+        " | `kilit` adlı komutu özel mesajlarda kullanamazsın."
       );
     return message.author.send(motion);
   }
@@ -25,7 +25,7 @@ exports.run = (client, message, args) => {
   let validUnlocks = ["kilitaç", "unlock"];
   if (!time)
     return message.channel.send(
-      "Spallers・**Doğru Kullanım** : `s*kilitle 2min`"
+      "**Doğru Kullanım** : kilitle 2min"
     );
   if (validUnlocks.includes(time)) {
   message.channel.updateOverwrite(message.guild.roles.everyone, { SEND_MESSAGES: null })

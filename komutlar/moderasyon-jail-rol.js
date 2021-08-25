@@ -3,6 +3,7 @@ const db = require('croxydb');
 const ayarlar = require('../ayarlar.json')
 
 exports.run = async(client, message, args) => {
+let prefix = ayarlar.prefix
   if(db.fetch(`bakim`)) {
   const bakim = new Discord.MessageEmbed()
   .setColor("#FF56FF")
@@ -15,14 +16,14 @@ exports.run = async(client, message, args) => {
  if(message.author.id !== "477189482206986240") return message.channel.send(bakim)
 }
   
-   var başarılı = ['**İŞTE BU!** <a:tmdir:778774341357797378>', '**SÜPER!** <a:tmdir:778774341357797378>', '**NASIL YAPTIN BUNU?!** <a:tmdir:778774341357797378>', '**MÜKEMMEL!** <a:tmdir:778774341357797378>', '**SEVDİM BUNU!** <a:tmdir:778774341357797378>', '**ŞİMDİ OLDU!** <a:tmdir:778774341357797378>'];
+   var başarılı = ['**İŞTE BU!**', '**SÜPER!** ', '**NASIL YAPTIN BUNU?!** ', '**MÜKEMMEL!** ', '**SEVDİM BUNU!** ', '**ŞİMDİ OLDU!** '];
    var x = başarılı[Math.floor(Math.random() * başarılı.length)];
 
-   var başarısız = ['**TÜH!** <a:siren:778777832976416778>', '**OLMADI BU!** <a:siren:778777832976416778>', '**HAY AKSİ!** <a:siren:778777832976416778>', '**HADİ ORADAN!** <a:siren:778777832976416778>', '**OLMADI YA!** <a:siren:778777832976416778>', '**BÖYLE OLMAZ?!** <a:siren:778777832976416778>', '**HADİ YA!** <a:siren:778777832976416778>'];
+   var başarısız = ['**TÜH!** ', '**OLMADI BU!** ', '**HAY AKSİ!** ', '**HADİ ORADAN!** ', '**OLMADI YA!** ', '**BÖYLE OLMAZ?!** ', '**HADİ YA!**'];
    var x2 = başarısız[Math.floor(Math.random() * başarısız.length)];
   
 if (!message.member.hasPermission('MANAGE_GUILD')) return message.reply(`**${ayarlar.prefix}jail-rol ayarla/sıfırla** isimli komutu kullanabilmek için \`SUNUCUYU YÖNET\` yetkisine sahip olman gerekiyor.`)
-if (!args[0]) return message.reply(`Sistemi kullanabilmek için, q!jail-rol ayarla/sıfırla @rol yazmalısın.\nDetaylı bilgi için: q!yardım sustur-kanal`)
+if (!args[0]) return message.reply(`Sistemi kullanabilmek için, ${prefix}jail-rol ayarla/sıfırla @rol yazmalısın.\nDetaylı bilgi için: ${prefix}yardım sustur-kanal`)
    
   
   if (args[0] == 'ayarla') {

@@ -5,7 +5,7 @@ exports.run = async(client,message, args) => {
         	 let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -25,7 +25,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
   if(!args[0])  return message.channel.send(new Discord.MessageEmbed()
 .setColor('#f6ff00')
-.setDescription('> **Otorol sistemini ne yapmak istediğini belirtmedin** <a:dnya:778787223847829504> \n> `s*otorol ayarla @üye #kanal` **Otorol sistemini ayarlar.** \n> `s*otorol sıfırla` **Otorol sistemini sıfırlar.**'))
+.setDescription(' **Otorol sistemini ne yapmak istediğini belirtmedin**  \n> `${prefix}otorol ayarla @üye #kanal` **Otorol sistemini ayarlar.** \n> `${prefix}otorol sıfırla` **Otorol sistemini sıfırlar.**'))
 
   if(args[0] === "ayarla") {
 
@@ -33,7 +33,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
      var rolkanal = message.mentions.channels.first()
     if(!rol) return message.channel.send(new Discord.MessageEmbed()
 .setColor('#f6ff00')
-.setDescription('**Bir rol etiketlemelisin** `s*otorol ayarla @rol #kanal` **(Eğer rolü bulamıyorsan etiketleme izninin açık olduğundan veya komutun kullanıldığı kanalı görebildiğinden emin ol)**'))
+.setDescription('**Bir rol etiketlemelisin** `${prefix}otorol ayarla @rol #kanal` **(Eğer rolü bulamıyorsan etiketleme izninin açık olduğundan veya komutun kullanıldığı kanalı görebildiğinden emin ol)**'))
     if(!rolkanal) return message.channel.send(new Discord.MessageEmbed().setColor('#f6ff00').setDescription('Bir kanal etiketlemelisin eğer kanalı etiketleyemiyorsan botun o kanalı gördüğünden emin ol.'))
  
     db.set(`autoRoleChannel_${message.guild.id}`, rolkanal.id)
@@ -41,7 +41,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   
     return message.channel.send(new Discord.MessageEmbed()
 .setColor('#f6ff00')
-.setDescription('> **Otorol Sistemi Aktif edildi** <a:tmdir:778774341357797378> \n> **Sunucuya giren kişilere verilecek rol** <@&' + rol + '> \n> **Otorol mesajının gideceği kanal** <#' +rolkanal.id+ '> **Olarak ayarlandı.**'))
+.setDescription('> **Otorol Sistemi Aktif edildi**  \n> **Sunucuya giren kişilere verilecek rol** <@&' + rol + '> \n> **Otorol mesajının gideceği kanal** <#' +rolkanal.id+ '> **Olarak ayarlandı.**'))
   }
   
   if(args[0] === "sıfırla") {

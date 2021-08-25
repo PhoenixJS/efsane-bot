@@ -20,7 +20,7 @@ let kategoriID = message.channel.parentID;
         .setColor('#f6ff00')
         .setTitle('Başarılı!')
         .setDescription('Kanaldaki Bütün Mesajlar Silinmiştir.')
-        .setFooter("Spallers'i Tercih Ettiğiniz İçin Teşekkürler!")
+        .setFooter(" BRK'yi  Tercih Ettiğiniz İçin Teşekkürler!")
         z.send(mesaj)
   })
 }
