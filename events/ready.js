@@ -7,8 +7,8 @@ var prefix = ayarlar.prefix;
   
 module.exports = client => {
 var oyun = [
-        `Aloysha Code İyi Kullanımlar Diler`,
-        `Sponsorumuz : Tron Bilişim https://discord.gg/nSG8YPMurf`
+        `Burak Gelne`,
+        `Burak`
     ];
 
     setInterval(function() {
