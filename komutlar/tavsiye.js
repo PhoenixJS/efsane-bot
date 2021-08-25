@@ -1,7 +1,6 @@
-//Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
-//Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
+
 let tavsiye = args.join(" ").slice(0);
   const sebep2 = new Discord.MessageEmbed()
   .setDescription(` \`${message.author.username}\` **Tavsiyenize Yazar mısın ?**`)
@@ -13,7 +12,7 @@ let userid = message.author.id;
 let guild = message.guild.name;
 let guildid = message.guild.id;
 let kanal = message.channel.name;
-let gonderilecek_kisi = bot.users.cache.get("477189482206986240")//rapor edilecek kişinin idsi
+let gonderilecek_kisi = bot.users.cache.get("627803211348312065")//rapor edilecek kişinin idsi
 let embed = new Discord.MessageEmbed()
 .setTitle("Tavsiye Bildiri")
 .setThumbnail(bot.user.avatarURL())
@@ -25,22 +24,20 @@ let embed = new Discord.MessageEmbed()
 .setColor("GOLD")
    message.react("👍");
 
-//Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
-message.channel.send("<a:tmdir:778774341357797378> **| Tavsiyeniz Başarı İle Bot Sahibime İletildi. Teşekkür Ederiz. | :heart:**")
+
+message.channel.send(" **| Tavsiyeniz Başarı İle Bot Sahibime İletildi. Teşekkür Ederiz. | :heart:**")
 gonderilecek_kisi.send(embed).then(i => i.react("⏳"))
-//Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
+
 }
-//Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
 exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
   permLevel: 0  
 };
-//Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
+
 exports.help = {
   name: 'tavsiye',
   description: 'Çalışıp para kazanırsınız.',
   usage: 'prefix+bug-bildir <bug>'
 }
-//Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
