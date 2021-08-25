@@ -27,9 +27,9 @@ let eklenti = new Discord.MessageEmbed()
 .setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343766446964746/standard_2.gif')
 .setColor('#f6ff00')
 .setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<:sagok:778774307253518366> __Davet Log__`,` \`s*davet-log ayarla <#kanal>\` Davet Log Kanalını Ayarlarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Davetlerim__`,` \`s*davetlerim\` Davet Sayınızı Öğrenirsiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.addField(`<a:kalkan:835661236849999922> __Davet Log__`,` \`s*davet-log ayarla <#kanal>\` Davet Log Kanalını Ayarlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Davetlerim__`,` \`s*davetlerim\` Davet Sayınızı Öğrenirsiniz.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

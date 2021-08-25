@@ -2,6 +2,7 @@ const db = require("croxydb");
 const Discord = require('discord.js');
 const fynx = require("../ayarlar.json");
 exports.run = async (client, message, args) => {
+let prefix = fynx.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -22,17 +23,17 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 let eklenti = new Discord.MessageEmbed()  
-.setAuthor(`Spallers Davet Komutları`, client.user.avatarURL())
+.setAuthor(` BRK BotList Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
-.setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343691221205052/standard.gif')
+.setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
-.setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<:sagok:778774307253518366> __Başvurular__`,` \`s*başvuru-gidecek-kanal-ayarla\` Başvuruların Gideceği Kanal`,true)
-.addField(`<:sagok:778774307253518366> __Başvuru Log__`,` \`s*başvuru-log-ayarla\` Bot Onaylandı / Reddedildi Log Kanalı.`,true)
-.addField(`<:sagok:778774307253518366> __Yetkili Rol__`,` \`s*botlist-yetkili-rol-ayarla\` Botları Onaylayacak Yetkili Rol.`,true)
-.addField(`<:sagok:778774307253518366> __Bot Reddet__`,` \`s*botreddet <BotID> <SahipID> <Sebep>\` Botu Reddedersiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Bot Onayla__`,` \`s*botonayla <BotID> <SahipID>\` Botu Onaylarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.setDescription(` Spallers botumuzu eklemek için \`${prefix}botdavet\` yazabilirsiniz.`)  
+.addField(`<a:kalkan:835661236849999922> __Başvurular__`,` \`${prefix}başvuru-gidecek-kanal-ayarla\` Başvuruların Gideceği Kanal`,true)
+.addField(`<a:kalkan:835661236849999922> __Başvuru Log__`,` \`${prefix}başvuru-log-ayarla\` Bot Onaylandı / Reddedildi Log Kanalı.`,true)
+.addField(`<a:kalkan:835661236849999922> __Yetkili Rol__`,` \`${prefix}botlist-yetkili-rol-ayarla\` Botları Onaylayacak Yetkili Rol.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bot Reddet__`,` \`${prefix}botreddet <BotID> <SahipID> <Sebep>\` Botu Reddedersiniz.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bot Onayla__`,` \`${prefix}botonayla <BotID> <SahipID>\` Botu Onaylarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`${prefix}botdavet\` | BRK Sunucunuza Davet Edersiniz\n \`${prefix}istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {
