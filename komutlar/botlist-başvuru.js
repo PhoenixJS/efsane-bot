@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
   let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!`)
+ .setDescription(`** **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!**`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -21,20 +21,19 @@ module.exports.run = async (client, message, args) => {
 if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
-  let prefix = "s*"
   let botid = (args[0])
   let prefix2 = (args[1])
   let onay = (args[2])
     if (!botid) {
-      message.channel.send(`<a:siren:778777832976416778> Bir botid yazmalısın!`);
+      message.channel.send(`**Bir botid yazmalısın!**`);
       return;
     }
    if (!prefix2) {
-    message.channel.send(`<a:siren:778777832976416778> Bir prefix yazmalısın!`);
+    message.channel.send(`** Bir prefix yazmalısın!**`);
     return;
     }
      if (!onay) {
-    message.channel.send(`<a:siren:778777832976416778> Bot Onaylı mı? **Evet / Hayır**`);
+    message.channel.send(` Bot Onaylı mı? **Evet / Hayır**`);
     return;
     }
   let log = db.fetch(`westrabasvurugidecekkanal_${message.guild.id}`)

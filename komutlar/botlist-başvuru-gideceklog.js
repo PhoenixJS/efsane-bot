@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
   let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!`)
+ .setDescription(`** **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/aloysha) gelebilirsin!**`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -22,11 +22,10 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
   
-  if(message.author.id !== message.guild.owner.user.id) return message.reply('<a:siren:778777832976416778> Bu komutu kullanabilmek için **Sunucu Sahibi** olmalısın!')
-  let prefix = "s*"
+  if(message.author.id !== message.guild.owner.user.id) return message.reply(' **Bu komutu kullanabilmek için **Sunucu Sahibi** olmalısın!**')
   let kanal = message.mentions.channels.first();
     if (!kanal) {
-      message.channel.send(`<a:siren:778777832976416778> Bir kanal etiketlemelisin!`);
+      message.channel.send(`** Bir kanal etiketlemelisin!**`);
       return;
     }
  db.set(`westrabasvurugidecekkanal_${message.guild.id}`, kanal.id);

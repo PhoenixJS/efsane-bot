@@ -35,7 +35,7 @@ let eklenti = new Discord.MessageEmbed()
 .addField(`<a:kalkan:835661236849999922> __Reklam Koruması__`,` \`${prefix}reklamengel\` Reklam Korumasını Aktif Eder.`,true)
 .addField(`<a:kalkan:835661236849999922> __Reklam-Log Koruması__`,` \`${prefix}reklamlog\` Reklam Yapınca Mesajı Siler Kanal'a Atar.`,true)
 .addField(`<a:kalkan:835661236849999922> __Küfür Koruması__`,` \`${prefix}küfür-engelle\` Küfür Korumasını Aktif Eder.`,true)
-.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`${prefix}botdavet\` | BRK'yi Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`${prefix}botdavet\` | BRK'yi Sunucunuza Davet Edersiniz\n \`${prefix}istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {
