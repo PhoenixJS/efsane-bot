@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const db = require('croxydb')
 
 exports.run = async(client, message, args) => {
+let prefix = require.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -25,7 +26,7 @@ if (message.channel.type !== "text") return;
 const limit = args[0] ? args[0] : 0;
   if(!limit) {
               var embed = new Discord.MessageEmbed()
-                .setDescription(`Doğru kullanım: \` s*yavaş-mod [0/15]\``)
+                .setDescription(`Doğru kullanım: \` ${prefix}yavaş-mod [0/15]\``)
                 .setColor("#f6ff00")
                 .setTimestamp()
             message.channel.send({embed})
@@ -35,7 +36,7 @@ const limit = args[0] ? args[0] : 0;
 if (limit > 15) {
     return message.channel.send(new Discord.MessageEmbed().setDescription("Süre limiti maksimum **15** saniye olabilir.").setColor("#f6ff00"));
 }
-    message.channel.send(new Discord.MessageEmbed().setDescription(`<a:tmdir:778774341357797378> Yazma süre limiti **${limit}** saniye olarak ayarlanmıştır.`).setColor("#f6ff00"));
+    message.channel.send(new Discord.MessageEmbed().setDescription(` Yazma süre limiti **${limit}** saniye olarak ayarlanmıştır.`).setColor("#f6ff00"));
 var request = require('request');
 request({
     url: `https://discordapp.com/api/v7/channels/${message.channel.id}`,

@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -24,9 +24,9 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   let cinsiyet = args.slice(0).join(" ");
   if (!cinsiyet)
     return message.channel.send(
-      "<a:siren:778777832976416778> | Lütfen Cinsiyetini yaz. Unutma Sadece erkek,kız veya yok yazabilirsin (**Baş Harflerini BÜYÜK YAZMA**)"
+      "| Lütfen Cinsiyetini yaz. Unutma Sadece erkek,kız veya yok yazabilirsin (**Baş Harflerini BÜYÜK YAZMA**)"
     );
-  message.channel.send("<a:tmdir:778774341357797378> | **Cinsiyetin Başarıyla ``" + cinsiyet + "`` olarak ayarlandı!**");
+  message.channel.send(" | **Cinsiyetin Başarıyla ``" + cinsiyet + "`` olarak ayarlandı!**");
   db.set(`pcinsiyet_${message.author.id}`, cinsiyet);
 };
 exports.conf = {

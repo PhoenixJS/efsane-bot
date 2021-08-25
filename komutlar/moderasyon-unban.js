@@ -5,7 +5,7 @@ exports.run = (client, message, args, member ) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -27,7 +27,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     .setColor('#f6ff00')
     .setDescription('**:warning: Bunu yapabilmek için gerekli yetkiye sahip değilsiniz! :warning:**')
    .setTimestamp() 
-    .setFooter(`Spallers Ban Sistemi`)
+    .setFooter(`BRK Ban Sistemi`)
    return message.channel.send(prmlv)
   } 
   if (!message.guild) {
@@ -47,7 +47,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     .setColor('#f6ff00')
     .setDescription('**Banı kaldırılacak kişinin ID numarasını yazmalısın!**\n Doğru Kullanım:`s*unban idnumarası sebep`')
    .setTimestamp() 
-    .setFooter(`Spallers Ban Sistemi`)
+    .setFooter(`BRK Ban Sistemi`)
    return message.channel.send(bid).catch(console.error);
   } 
   if (reason.length < 1) {
@@ -67,7 +67,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     .addField('Yasağı Kaldırılan Kullanıcı:', `<@!${user}>`,true)
     .addField('Yasağı Kaldıran Yetkili:', `<@!${message.author.id}>`,true)
     .addField('Yasağı Kaldırma Sebebi:', reason,false)
-  .setFooter(`Spallers Ban Sistemi`);
+  .setFooter(`BRK Ban Sistemi`);
     
    message.channel.send(embed)
 };

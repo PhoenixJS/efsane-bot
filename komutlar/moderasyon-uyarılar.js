@@ -3,7 +3,7 @@ const data = require('croxydb')
 
 exports.run = async (client, message, args) => {
   
-  if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply(`Bu komutu kullanabilmek için **Üyeleri Banla** yetkisine sahip olmalısın!`);
+  if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(`Bu komutu kullanabilmek için **Üyeleri Banla** yetkisine sahip olmalısın!`);
   
 
 let sortArray = message.guild.members.cache.filter(m => !m.user.bot).array();

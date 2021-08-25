@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -22,8 +22,8 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
   let bayrak = args.slice(0).join(" ");
-  if (!bayrak) return message.channel.send("<a:siren:778777832976416778> | **Lütfen Bayrağını Gir (EMOJİ OLSUN) :flag_tr: Gibi**");
-  message.channel.send("<a:tmdir:778774341357797378> | **Profil Bayrağın Başarıyla ``" + bayrak + "`` olarak ayarlandı!**");
+  if (!bayrak) return message.channel.send(" | **Lütfen Bayrağını Gir (EMOJİ OLSUN) :flag_tr: Gibi**");
+  message.channel.send(" | **Profil Bayrağın Başarıyla ``" + bayrak + "`` olarak ayarlandı!**");
   db.set(`pbayrak_${message.author.id}`, bayrak);
 };
 exports.conf = {

@@ -26,34 +26,34 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
  
   let isim = await db.fetch(`pisim_${user.id}`);
   let isimYazi;
-  if (isim == null) isimYazi = "<:sagok:778774307253518366> `İsim ayarlanmamış!`";
-  else isimYazi = `<:sagok:778774307253518366> \`${isim}\``;
+  if (isim == null) isimYazi = "`İsim ayarlanmamış!`";
+  else isimYazi = ` \`${isim}\``;
   
   let favorioyun = db.fetch(`pfavorioyun_${message.author.id}`);
   let favoriYazi;
-  if (favorioyun == null) favoriYazi = "<:sagok:778774307253518366> `Oyun ayarlanmamış!`";
-  else favoriYazi = `<:sagok:778774307253518366> \`${favorioyun}\``;
+  if (favorioyun == null) favoriYazi = " `Oyun ayarlanmamış!`";
+  else favoriYazi = `\`${favorioyun}\``;
   
     let favorişarkı = db.fetch(`pfavorişarkı_${message.author.id}`);
   let favorisYazi;
-  if (favorişarkı == null) favorisYazi = "<:sagok:778774307253518366> `Şarkı ayarlanmamış!`";
-  else favorisYazi = `<:sagok:778774307253518366> \`${favorişarkı}\``;
+  if (favorişarkı == null) favorisYazi = " `Şarkı ayarlanmamış!`";
+  else favorisYazi = ` \`${favorişarkı}\``;
  
   let soyisim = await db.fetch(`psoyisim_${user.id}`);
   let soyisimYazi;
-  if (soyisim == null) soyisimYazi = "<:sagok:778774307253518366> `Soy İsim ayarlanmamış!`";
-  else soyisimYazi = `<:sagok:778774307253518366> \`${soyisim}\``;
+  if (soyisim == null) soyisimYazi = "`Soy İsim ayarlanmamış!`";
+  else soyisimYazi = ` \`${soyisim}\``;
  
   let cinsiyet = await db.fetch(`pcinsiyet_${user.id}`);
   let csYazi;
-  if (cinsiyet == null) csYazi = "<:sagok:778774307253518366> `Cinsiyet ayarlanmamış!`";
-  if (cinsiyet == "kız") csYazi = "<:sagok:778774307253518366> `Kız`";
-  if (cinsiyet == "erkek") csYazi = "<:sagok:778774307253518366> `Erkek`";
-  if (cinsiyet == "yok") csYazi = "<:sagok:778774307253518366> `Belirtmek istemiyor.`";
+  if (cinsiyet == null) csYazi = " `Cinsiyet ayarlanmamış!`";
+  if (cinsiyet == "kız") csYazi = " `Kız`";
+  if (cinsiyet == "erkek") csYazi = " `Erkek`";
+  if (cinsiyet == "yok") csYazi = "`Belirtmek istemiyor.`";
  
   let yas = await db.fetch(`pyas_${user.id}`);
   let yasYazi;
-  if (yas == null) yasYazi = "<:sagok:778774307253518366> `Yaş ayarlanmamış!`";
+  if (yas == null) yasYazi = " `Yaş ayarlanmamış!`";
   else yasYazi = `<:sagok:778774307253518366> \`${yas}\``;
  
   let bayrak = await db.fetch(`pbayrak_${user.id}`);

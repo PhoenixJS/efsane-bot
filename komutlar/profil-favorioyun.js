@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -22,8 +22,8 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
   let favorioyun = args.slice(0).join(" ");
-  if (!favorioyun) return message.channel.send("<a:siren:778777832976416778> | **Lütfen Oyununu yaz.**");
-  message.channel.send("<a:tmdir:778774341357797378> | **Favori Oyunun ``" + favorioyun + "`` olarak ayarlandı!**");
+  if (!favorioyun) return message.channel.send(" | **Lütfen Oyununu yaz.**");
+  message.channel.send(" | **Favori Oyunun ``" + favorioyun + "`` olarak ayarlandı!**");
   db.set(`pfavorioyun_${message.author.id}`, favorioyun);
 };
 exports.conf = {

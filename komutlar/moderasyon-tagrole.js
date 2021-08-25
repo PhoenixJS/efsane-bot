@@ -2,24 +2,25 @@ const Discord = require('discord.js');
 const data = require('croxydb')
 
 exports.run = async (client, message, args) => {
+let prefix = require.prefix
 
 message.channel.send(new Discord.MessageEmbed()
 .setColor('#f6ff00')
-.setTitle('Spallers Tag Rol Sistemi')
-.setDescription(`\`s*rol-tag 🚀\`
+.setTitle(' BRK Tag Rol Sistemi')
+.setDescription(`\`${prefix}rol-tag 🚀\`
 **Lütfen tag ayarlayınız başlamadan önce**
 
-\`s*tag-role [@rolEtiket]\`
+\`${prefix}tag-role [@rolEtiket]\`
 Sunucunuz da **tag** alan üyeye verilecek rolü etiketle
 
-\`s*tag-log [#kanalEtiket]\`
+\`${prefix}tag-log [#kanalEtiket]\`
 **Tag** alan & çıkaran üyeleri kanala bilgi olarak gönderir
 
 \`\`\`Sıfırlama Komutları\`\`\`
-\`s*tagrole-sil\`
+\`${prefix}tagrole-sil\`
 **Tagın ayarlı olan rolü siler**
 
-\`s*tag-log-kapat\`
+\`${prefix}tag-log-kapat\`
 **Ayarladığınız tag kanalı sıfırlar**
 
 📢 Sistem Nasıl Çalışır?

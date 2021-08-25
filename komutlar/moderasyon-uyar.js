@@ -33,7 +33,7 @@ await message.channel.send(new Discord.MessageEmbed()
     .setTitle('Başarılı')
 
     .setDescription(`${kullanıcı} uyarıldı. Toplam uyarıları: **${sayı}**`)
-    .setFooter(`Spallers Uyarı Sistemi`))
+    .setFooter(`BRK Uyarı Sistemi`))
 
 await kullanıcı.send(new Discord.MessageEmbed()
 
@@ -42,7 +42,7 @@ await kullanıcı.send(new Discord.MessageEmbed()
     .setTitle('Hey Dikkat et')
 
     .setDescription(`${message.guild.name} sunucusunda uyarıldın. Toplam uyarıların: **${sayı}**`)
-    .setFooter(`Spallers Uyarı Sistemi`)) 
+    .setFooter(`BRK Uyarı Sistemi`)) 
 
 return}
 
