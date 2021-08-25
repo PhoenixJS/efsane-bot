@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
   .addField('İşte Destek Sunucum',"[Destek Sunucusu](https://discord.gg/tuG87ZadFu)")
   .setFooter('Üzgünüm...')
   .setImage('https://lh3.googleusercontent.com/proxy/gAN4I19oqqabXd_VIiwg5or-ITh4XxJTRNJA1ot0EIHPiBpxC74Atj4wNIcFes1N3VcE8WnOk6fIN29BChqNbj4lj9dIF2jiI7MBV6U8v842LA')
-if(message.author.id != "477189482206986240") return message.channel.send(bakim)
+if(message.author.id != "627803211348312065") return message.channel.send(bakim)
 
 }
       	 let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
@@ -27,7 +27,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     .setColor("#f6ff00")
     .setFooter(client.user.tag, client.user.avatarURL())
   .addField(
-  "» **Sahibim**","<@477189482206986240>"
+  "» **Sahibim**","<@627803211348312065>"
   )
     .addField(
       "» **Bellek kullanımı**",
@@ -68,9 +68,9 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     )
     .addField("» **Bit**", `\`${os.arch()}\``, true)
     .setThumbnail(client.user.avatarURL())
-  .setImage("https://media.discordapp.net/attachments/704352497422041168/727241966236074054/giphy-5.gif?width=544&height=408")
+  .setImage("")
     .addField("» **İşletim Sistemi**", `\`\`${os.platform()}\`\``)
-    .addField("**➥ Linkler**", "[<a:kral:778787824018653205> Davet Linki](https://discord.com/oauth2/authorize?client_id=778778531018571776&scope=bot&permissions=8)\n[<a:kral:778787824018653205> Destek Sunucu](https://discord.gg/3T5SHUD)\n[<a:kral:778787824018653205> Website](https://img.freepik.com/free-photo/coming-soon-neon-sign-dark-background-3d-rendering_35913-1058.jpg?size=626&ext=jpg)");
+    .addField("**➥ Linkler**", "[<a:kral:778787824018653205> Davet Linki](https://discord.com/oauth2/authorize?client_id=869251332010299392&scope=bot&permissions=8)\n[<a:kral:778787824018653205> Destek Sunucu](https://discord.gg/3T5SHUD)\n[Website= YAKINDA]()");
   return message.channel.send(msg);
 };
 

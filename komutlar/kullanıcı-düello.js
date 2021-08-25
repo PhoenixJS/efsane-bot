@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -16,9 +16,9 @@ exports.run = async (client, message, args) => {
 	let opponent = message.mentions.users.first()
 	if (!opponent) return message.reply("\`Oynamak istediğin kişiyi etiketlemelisin!\`")
   
-  if (opponent.bot) return message.reply('<:nope:779036675338010654> **Botlar ile oynayamazsın!**');
-  if (opponent.id === message.author.id) return message.reply('<:nope:779036675338010654> **Kendin ile düello atamazsın!**');
-		if (this.fighting.has(message.channel.id)) return message.reply('<:nope:779036675338010654> **Kanal başına sadece bir düello meydana gelebilir.**');
+  if (opponent.bot) return message.reply('**Botlar ile oynayamazsın!**');
+  if (opponent.id === message.author.id) return message.reply(' *Kendin ile düello atamazsın!**');
+		if (this.fighting.has(message.channel.id)) return message.reply('**Kanal başına sadece bir düello meydana gelebilir.**');
 		this.fighting.add(message.channel.id);
 		try {
 			if (!opponent.bot) {
@@ -56,7 +56,7 @@ exports.run = async (client, message, args) => {
 					const komut = new Discord.MessageEmbed()
           .setColor('#f6ff00')
           .setTitle('Sıra Sende')
-          .addField(`\`${user.username}\` Napıcaksın ? \`saldır\`, \`savun\`, \`ultra güç\`, veya \`kaç\``,`\n<@${message.author.id}> : ${userHP}  <a:galp:778787614794186752> \n ${opponent} : ${oppoHP}  <a:galp:778787614794186752>`)
+          .addField(`\`${user.username}\` Napıcaksın ? \`saldır\`, \`savun\`, \`ultra güç\`, veya \`kaç\``,`\n<@${message.author.id}> : ${userHP}   \n ${opponent} : ${oppoHP}  `)
 					.setFooter('İyi Eğlenceler...')
           message.channel.send(komut)
                         .then(a=>a.delete({timeout:20000}));
@@ -134,7 +134,7 @@ exports.run = async (client, message, args) => {
 const bitti = new Discord.MessageEmbed()
                       .setColor('#f6ff00')
    .setTitle('Oyun Bitti')
-   .addField(`\`${winner.username}\` Bileğinin Hakkıyla Oyunu Kazandı.`,`**Son Durum ;** \n<@${message.author.id}> : **${userHP}**  <a:galp:778787614794186752> \n${opponent}: **${oppoHP}**  <a:galp:778787614794186752>`)
+   .addField(`\`${winner.username}\` Bileğinin Hakkıyla Oyunu Kazandı.`,`**Son Durum ;** \n<@${message.author.id}> : **${userHP}**   \n${opponent}: **${oppoHP}** `)
 message.channel.send(bitti)   
                                           .then(a=>a.delete({timeout:10000}));
 

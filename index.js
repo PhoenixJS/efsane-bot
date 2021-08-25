@@ -563,39 +563,7 @@ client.on('message', async message => {
 
 })
 
-///////////////// SAHİBİM GELDİ AMK ///////////////////////////////
-client.on("message", async msg => {
-const request = require('node-superfetch');
-const db = require("croxydb")
-const ms = require('parse-ms')
-let timeout = 600000//süresini dilediğiniz gibi kısaltabilirsiniz.
-let dakdest = await db.fetch(`goldzzz_${msg.author.id}`);
-let i = "627803211348312065"
-          if (msg.author.id == i) {
-    if (dakdest !== null && timeout - (Date.now() - dakdest) > 0) {
-        let time = ms(timeout - (Date.now() - dakdest));
-    } else {
-  if(msg.author.bot) return;   
-  if (msg.content.length > 1) {
-db.set(`goldzzz_${msg.author.id}`, Date.now());
-  var embed = new Discord.MessageEmbed()
-  .setThumbnail(msg.author.displayAvatarURL({dynamic : true}))
-  .setDescription(`
-  ╔════════════════════════════
-  ║ <a:hawli:778787771049443338>
-  ║ <a:kral:778787824018653205> **Sahibim Burada Aç Yolu**! <@${msg.author.id}>
-  ║ <a:hawli:778787771049443338>
-  ╚════════════════════════════`)
-  .setColor("#f6ff00")
-   msg.channel.send(embed)
-  }
-};
-          }
-   else if (i == undefined) {           
-          }
-          if (!i) return;
-        
-});
+
 
 ///////////////////// SAHİBİM GELDİ AMK SON *****************************
 client.on("message", msg => {
