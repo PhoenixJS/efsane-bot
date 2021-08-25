@@ -6,7 +6,7 @@ exports.run = async(client, message, args) =>{
         	 let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -27,7 +27,7 @@ let frenzy_ibrahim = await db.fetch(`Frenzy?Code?Ototag_${message.guild.id}`) ||
 if(!frenzy_ibrahim) return message.reply(`:x: Bu sistem zaten kapalı durumda. Açmak için **${prefix}ototag rol kanal**`)
 db.delete(`Frenzy?Code?Ototag_${message.guild.id}`) 
 db.delete(`Frenzy?Code?OtotagKanal_${message.guild.id}`)
-message.channel.send(`<a:tmdir:778774341357797378> | **Ototag kapatıldı!**\n<a:tmdir:778774341357797378> | **Yeni gelen kullanıcılara hiç bir rol vermeyeceğim.**`)
+message.channel.send(` | **Ototag kapatıldı!**\n | **Yeni gelen kullanıcılara hiç bir rol vermeyeceğim.**`)
 };  
 exports.conf = {
   enabled: false, 

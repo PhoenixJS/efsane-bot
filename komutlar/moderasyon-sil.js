@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -26,18 +26,18 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
   if (!message.member.hasPermission("MANAGE_MESSAGES"))
     return message.channel.send(
-      "<:nope:779036675338010654> **Bu komutu kullanmak için Mesajları Yönet yetkisine sahip olmalısın.**"
+      " **Bu komutu kullanmak için Mesajları Yönet yetkisine sahip olmalısın.**"
     );
   if (!args[0])
     return message.reply(
-      "<:nope:779036675338010654> **En Az** `1 - 100` **Arasında Bir Tam Sayı Değeri Girmelisiniz.**"
+      " **En Az** `1 - 100` **Arasında Bir Tam Sayı Değeri Girmelisiniz.**"
     );
   message.channel.bulkDelete(args[0]).then(() => {
    const tamamdır = new Discord.MessageEmbed()
   .setColor("#f6ff00")    
    .setThumbnail('https://cdn.discordapp.com/attachments/767544528537649193/774057334862512128/Geri-Donusum-Sembolleri-90859.gif')
   .setTitle('BAŞARILI')
-  .addField(`\`${message.author.username}\`  <a:tmdir:778774341357797378>  Başarıyla **${args[0]}** Mesajı Sildim`,`Spallers İyi Muhabbetler Diler...`)
+  .addField(`\`${message.author.username}\`    Başarıyla **${args[0]}** Mesajı Sildim`,`BRK  İyi Muhabbetler Diler...`)
  message.channel.send(tamamdır)
     message.react('👍')
    

@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 const db = require('croxydb')
-
+const fynx = require
 exports.run = async (client, message) => {
+let prefix = fynx.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -26,7 +27,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
    let voiceChannels = message.guild.channels.cache.filter(c => c.type === 'voice');
   for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
   let panel = await db.fetch(`sunucupanel.${message.guild.id}`)
-  if(panel) return message.channel.send(`Panel Zaten Ayarlanmış Silmek İçin; \`g!panel-sil\``)
+  if(panel) return message.channel.send(`Panel Zaten Ayarlanmış Silmek İçin; \`${prefix}panel-sil\``)
   
   
 let every = message.guild.roles.cache.find(r => r.name === '@everyone')
