@@ -2,6 +2,7 @@ const db = require("croxydb");
 const Discord = require('discord.js');
 const fynx = require("../ayarlar.json");
 exports.run = async (client, message, args) => { 
+let prefix = fynx.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -24,13 +25,13 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 let eklenti = new Discord.MessageEmbed()  
 .setAuthor(`Spallers Kullanıcı Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
-.setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343767943413810/standard_3.gif')
+.setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
 .setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<:sagok:778774307253518366> __Oyun Teması__`,` \`s*sunucu-kur-oyun\` Oyun Temalı Sunucu Kurar.`,true)
-.addField(`<:sagok:778774307253518366> __J4J Teması__`,` \`s*sunucu-kur-j4j\` J4J Temalı Sunucu Kurar.`,true)
-.addField(`<:sagok:778774307253518366> __İnvite = Ödül Teması__`,` \`s*sunucu-kur-invite=ödül\` Ödül Temalı Sunucu Kurar.`,true)
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.addField(`<a:kalkan:835661236849999922> __Oyun Teması__`,` \`s*sunucu-kur-oyun\` Oyun Temalı Sunucu Kurar.`,true)
+.addField(`<a:kalkan:835661236849999922> __J4J Teması__`,` \`s*sunucu-kur-j4j\` J4J Temalı Sunucu Kurar.`,true)
+.addField(`<a:kalkan:835661236849999922> __İnvite = Ödül Teması__`,` \`s*sunucu-kur-invite=ödül\` Ödül Temalı Sunucu Kurar.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

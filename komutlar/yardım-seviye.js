@@ -2,6 +2,7 @@ const db = require("croxydb");
 const Discord = require('discord.js');
 const fynx = require("../ayarlar.json");
 exports.run = async (client, message, args) => { 
+let prefix = fynx.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -24,19 +25,19 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 let eklenti = new Discord.MessageEmbed()  
 .setAuthor(`Spallers Seviye Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
-.setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343766446964746/standard_2.gif')
+.setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
 .setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<:sagok:778774307253518366> __Seviye Ayarlar__`,` \`s*seviye-ayarlar\` Seviye Ayarlarını Gösterir.`,true)
-.addField(`<:sagok:778774307253518366> __Seviye Log__`,` \`s*seviye-log-ayarla <#kanal>\` Seviye Atlayınca Mesaj Gidecek Kanal.`,true)
-.addField(`<:sagok:778774307253518366> __Seviye Rol__`,` \`s*seviye-rol\` İstenilen Seviyeye Gelince Verilecek Rol`,true)
-.addField(`<:sagok:778774307253518366> __Seviye Sıfırla__`,` \`s*seviye-sıfırla\`  Seviye Sistemini Sıfırlarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Seviye Sınır__`,` \`s*seviye-sınır\` Maksimum Kazanılanabilecek Seviyeyi Belirler.`,true)
-.addField(`<:sagok:778774307253518366> __Seviye XP__`,` \`s*seviye-xp\`  Bir Mesaj Başına Verilecek Xp yi ayarlar.`,true)
-.addField(`<:sagok:778774307253518366> __Seviye Top5__`,` \`s*seviye-top\` Sunucuda ki En yüksek 5 Kişiyi Gösterir`,true)
-.addField(`<:sagok:778774307253518366> __Seviye Rolleri__`,` \`s*seviyerolleri\` Hangi Seviye de Rol Verilecek Onu Gösterir.`,true)
-.addField(`<:sagok:778774307253518366> __Seviye Bilgi__`,` \`s*seviyebilgi\` Seviyenizi Gösterir.`,true)
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`sb!botbilgi\` | Botun İstatistiklerini Gösterir `)
+.addField(`<a:kalkan:835661236849999922> __Seviye Ayarlar__`,` \`s*seviye-ayarlar\` Seviye Ayarlarını Gösterir.`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye Log__`,` \`s*seviye-log-ayarla <#kanal>\` Seviye Atlayınca Mesaj Gidecek Kanal.`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye Rol__`,` \`s*seviye-rol\` İstenilen Seviyeye Gelince Verilecek Rol`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye Sıfırla__`,` \`s*seviye-sıfırla\`  Seviye Sistemini Sıfırlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye Sınır__`,` \`s*seviye-sınır\` Maksimum Kazanılanabilecek Seviyeyi Belirler.`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye XP__`,` \`s*seviye-xp\`  Bir Mesaj Başına Verilecek Xp yi ayarlar.`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye Top5__`,` \`s*seviye-top\` Sunucuda ki En yüksek 5 Kişiyi Gösterir`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye Rolleri__`,` \`s*seviyerolleri\` Hangi Seviye de Rol Verilecek Onu Gösterir.`,true)
+.addField(`<a:kalkan:835661236849999922> __Seviye Bilgi__`,` \`s*seviyebilgi\` Seviyenizi Gösterir.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`sb!botbilgi\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

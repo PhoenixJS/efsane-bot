@@ -2,6 +2,7 @@ const db = require("croxydb");
 const Discord = require('discord.js');
 const fynx = require("../ayarlar.json");
 exports.run = async (client, message, args) => { 
+let prefix = fynx.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -24,22 +25,21 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 let eklenti = new Discord.MessageEmbed()  
 .setAuthor(`Spallers Moderasyon Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
-.setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343668857307166/standard_1.gif')
+.setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
 .setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)
-.addField(`<:sagok:778774307253518366> __Jail Log__`,` \`s*jail-kanal ayarla\` Jail Log Kanalını Ayarlarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Jail Yetkili Rol__`,` \`s*jail-yetkilisi ayarla \` Sadece Kimler Jail Atabilir?`,true)
-.addField(`<:sagok:778774307253518366> __Jail Rolü__`,` \`s*jail-rol ayarla \` Jail Verilecek Rol.`,true)
-.addField(`<:sagok:778774307253518366> __Jail__`,` \`s*jail @üye <10s,10m,10h,10d> sebep \` Kişiye Jail Rolünü Verirsiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Mute Log__`,` \`s*mute-log #kanal \` Mute Log Kanalı Ayarlarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Mute Log Kapat__`,` \`s*mute-log-kapat \` Mute Log Kanalını Sıfırlar.`,true)
-.addField(`<:sagok:778774307253518366> __Mute Yetkili Rol__`,` \`s*mute-yetkili-rol <@rol> \` Sadece Kimler Mute Atabilir?`,true)
-.addField(`<:sagok:778774307253518366> __Mute Yetkili Rol Sil__`,` \`s*muteyetki-sil \` Otomatik Selamlamayı Açar/Kapatır.`,true)
-.addField(`<:sagok:778774307253518366> __Mute__`,` \`s*mute <@üye> <1s> <1m> <1h> <1d> \` Otomatik Selamlamayı Açar/Kapatır.`,true)
-.addField(`<:sagok:778774307253518366> __Sunucu Paneli__`,` \`s*panel-kur\` Sunucu Kanallarını Açar`,true)
-.addField(`<:sagok:778774307253518366> __Paneli Kaldır__`,` \`s*panel-sil\` Panel Kanallarını Siler`,true)
-
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.addField(`<a:kalkan:835661236849999922> __Jail Log__`,` \`s*jail-kanal ayarla\` Jail Log Kanalını Ayarlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Jail Yetkili Rol__`,` \`s*jail-yetkilisi ayarla \` Sadece Kimler Jail Atabilir?`,true)
+.addField(`<a:kalkan:835661236849999922> __Jail Rolü__`,` \`s*jail-rol ayarla \` Jail Verilecek Rol.`,true)
+.addField(`<a:kalkan:835661236849999922> __Jail__`,` \`s*jail @üye <10s,10m,10h,10d> sebep \` Kişiye Jail Rolünü Verirsiniz.`,true)
+.addField(`<a:kalkan:835661236849999922> __Mute Log__`,` \`s*mute-log #kanal \` Mute Log Kanalı Ayarlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922>__Mute Log Kapat__`,` \`s*mute-log-kapat \` Mute Log Kanalını Sıfırlar.`,true)
+.addField(`<a:kalkan:835661236849999922> __Mute Yetkili Rol__`,` \`s*mute-yetkili-rol <@rol> \` Sadece Kimler Mute Atabilir?`,true)
+.addField(`<a:kalkan:835661236849999922> __Mute Yetkili Rol Sil__`,` \`s*muteyetki-sil \` Otomatik Selamlamayı Açar/Kapatır.`,true)
+.addField(`<a:kalkan:835661236849999922> __Mute__`,` \`s*mute <@üye> <1s> <1m> <1h> <1d> \` Otomatik Selamlamayı Açar/Kapatır.`,true)
+.addField(`<a:kalkan:835661236849999922> __Sunucu Paneli__`,` \`s*panel-kur\` Sunucu Kanallarını Açar`,true)
+.addField(`<a:kalkan:835661236849999922> __Paneli Kaldır__`,` \`s*panel-sil\` Panel Kanallarını Siler`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

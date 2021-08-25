@@ -2,6 +2,7 @@ const db = require("croxydb");
 const Discord = require('discord.js');
 const fynx = require("../ayarlar.json");
 exports.run = async (client, message, args) => { 
+let prefix = fynx.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -24,19 +25,19 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 let eklenti = new Discord.MessageEmbed()  
 .setAuthor(`Spallers Moderasyon Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
-.setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343668857307166/standard_1.gif')
+.setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
 .setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<:sagok:778774307253518366> __Ban Log__`,` \`s*ban-log\` Ban Log Kanalı Ayarlarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Ban Yetkili Rol__`,` \`s*ban-yetkili-rol\` Sadece Kimler Banlayabilir?`,true)
-.addField(`<:sagok:778774307253518366> __Ban__`,` \`s*ban <@üye> <sebep>\` Kişiyi Banlarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Ban Kaldır__`,` \`s*unban <KişiID> <Sebep> \` Belirtiğiniz Kişinin Banını Açar.`,true)
-.addField(`<:sagok:778774307253518366> __Ban Affı__`,` \`s*banaffı \` Bütün Yasaklıların Banını Açar.`,true)
-.addField(`<:sagok:778774307253518366> __Kick Log__`,` \`s*kick-log\`  Kick Log Kanalı Ayarlarsınız.`,true)
-.addField(`<:sagok:778774307253518366> __Kick Yetkili Rol__`,` \`s*kick-yetkili-rol\` Sadece Kimler Kick Atabilir?`,true)
-.addField(`<:sagok:778774307253518366> __Kick__`,` \`s*kick <@üye> <sebep> \` Kişiyi Sunucudan Kicklersiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Moderasyon3__`,` \`s*moderasyon3 \` | Moderasyon Menüsünün Devamı.`,true)
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.addField(`<a:kalkan:835661236849999922> __Ban Log__`,` \`s*ban-log\` Ban Log Kanalı Ayarlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Ban Yetkili Rol__`,` \`s*ban-yetkili-rol\` Sadece Kimler Banlayabilir?`,true)
+.addField(`<a:kalkan:835661236849999922> __Ban__`,` \`s*ban <@üye> <sebep>\` Kişiyi Banlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Ban Kaldır__`,` \`s*unban <KişiID> <Sebep> \` Belirtiğiniz Kişinin Banını Açar.`,true)
+.addField(`<a:kalkan:835661236849999922> __Ban Affı__`,` \`s*banaffı \` Bütün Yasaklıların Banını Açar.`,true)
+.addField(`<a:kalkan:835661236849999922> __Kick Log__`,` \`s*kick-log\`  Kick Log Kanalı Ayarlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Kick Yetkili Rol__`,` \`s*kick-yetkili-rol\` Sadece Kimler Kick Atabilir?`,true)
+.addField(`<a:kalkan:835661236849999922> __Kick__`,` \`s*kick <@üye> <sebep> \` Kişiyi Sunucudan Kicklersiniz.`,true)
+.addField(`<a:kalkan:835661236849999922> __Moderasyon3__`,` \`s*moderasyon3 \` | Moderasyon Menüsünün Devamı.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

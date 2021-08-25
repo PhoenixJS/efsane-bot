@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fynx = require("../ayarlar.json");
 const db = require("croxydb");
 exports.run = async (client, message, args) => { 
+let prefix = fynx.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -24,13 +25,13 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 let eklenti = new Discord.MessageEmbed()  
 .setAuthor(`Spallers Kullanıcı Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
-.setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343767943413810/standard_3.gif')
+.setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
 .setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<:sagok:778774307253518366> __İstatistiğim__`,` \`s*istatistiğim\`Kendi istatistiğinizi görürsünüz.`,true)
-.addField(`<:sagok:778774307253518366> __Sıralama__`,` \`s*top\` Sunucududa istatistiklerde ilk 5i gösterir.`,true)
-.addField(`<:sagok:778774307253518366> __Reset__`,` \`s*reset\` Sunucudaki istatistikleri sıfırlar..`,true)
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.addField(`<a:kalkan:835661236849999922> __İstatistiğim__`,` \`s*istatistiğim\`Kendi istatistiğinizi görürsünüz.`,true)
+.addField(`<a:kalkan:835661236849999922> __Sıralama__`,` \`s*top\` Sunucududa istatistiklerde ilk 5i gösterir.`,true)
+.addField(`<a:kalkan:835661236849999922> __Reset__`,` \`s*reset\` Sunucudaki istatistikleri sıfırlar..`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

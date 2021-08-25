@@ -25,8 +25,8 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 }
 let eklenti = new Discord.MessageEmbed()  
 .setAuthor('Spallers Yardım Menüsü',message.author.displayAvatarURL({dynamic : true}))
-.setThumbnail('https://cdn.discordapp.com/attachments/762400005562302514/785386641597530123/standard_5.gif')
-.setImage("https://cdn.discordapp.com/attachments/767544528537649193/782343767943413810/standard_3.gif")
+.setThumbnail('')
+.setImage("https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882")
 .setColor('#f6ff00')
 .addField( `**╔═══════════◥◣❖◢◤════════════╗**`,
     ` **║ Bilgilendirme.**
@@ -35,19 +35,19 @@ let eklenti = new Discord.MessageEmbed()
 **║ [Bot Sitesi]()**
 **╚═══════════◥◣❖◢◤════════════╝**
    `)
-.addField(`<a:yildiz:778774342640730112> __Kayıt Komutları__`,` \`s*kayıt\``,true)
-.addField(`<a:yildiz:778774342640730112> __Seviye Komutları__`,` \`s*seviye\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Yetkili Komutları__`,` \`s*moderasyon\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Logo Komutları__`,` \`s*logo\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Botlist Komutları__`,` \`s*botlist\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Guard Komutları__`,` \`s*guard\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Gif Komutları__`,` \`s*gif\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Güvenlik Komutları__`,` \`s*güvenlik\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Davet Komutları__`,` \`s*davet\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Profil Komutları__`,` \`s*profil\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Kullanıcı Komutları__`,` \`s*kullanıcı\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Nsfw Komutları__`,` \`s*nsfw\` `,true)
-.addField(`<a:yildiz:778774342640730112> __Hazır Sunucu Komutları__`,` \`s*sunucukur\` `,true)
+.addField(`<a:Cizgi:835661237471150080>__Kayıt Komutları__`,` \`${prefix}kayıt\``,true)
+.addField(`<a:Cizgi:835661237471150080>__Seviye Komutları__`,` \`${prefix}seviye\` `,true)
+.addField(`<a:Cizgi:835661237471150080>__Yetkili Komutları__`,` \`${prefix}moderasyon\` `,true)
+.addField(`<a:Cizgi:835661237471150080>__Logo Komutları__`,` \`${prefix}logo\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Botlist Komutları__`,` \`${prefix}botlist\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Guard Komutları__`,` \`${prefix}guard\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Gif Komutları__`,` \`${prefix}gif\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Güvenlik Komutları__`,` \`${prefix}güvenlik\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Davet Komutları__`,` \`${prefix}davet\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Profil Komutları__`,` \`${prefix}profil\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Kullanıcı Komutları__`,` \`${prefix}kullanıcı\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Nsfw Komutları__`,` \`s*nsfw\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Hazır Sunucu Komutları__`,` \`s*sunucukur\` `,true)
 
 .addField(`╔═══════════◥◣❖◢◤════════════╗`,
 `**║  \`${prefix}botdavet\` __Botu Davet Edebilirsiniz!__**
