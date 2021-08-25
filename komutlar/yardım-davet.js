@@ -23,14 +23,14 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 let eklenti = new Discord.MessageEmbed()  
-.setAuthor(`Spallers Davet Komutları`, client.user.avatarURL())
+.setAuthor(`BRK Davet Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
-.setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<a:kalkan:835661236849999922> __Davet Log__`,` \`s*davet-log ayarla <#kanal>\` Davet Log Kanalını Ayarlarsınız.`,true)
-.addField(`<a:kalkan:835661236849999922> __Davetlerim__`,` \`s*davetlerim\` Davet Sayınızı Öğrenirsiniz.`,true)
-.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.setDescription(` BRK botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
+.addField(`<a:kalkan:835661236849999922> __Davet Log__`,` \`${prefix}davet-log ayarla <#kanal>\` Davet Log Kanalını Ayarlarsınız.`,true)
+.addField(`<a:kalkan:835661236849999922> __Davetlerim__`,` \`${prefix}davetlerim\` Davet Sayınızı Öğrenirsiniz.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`${prefix}botdavet\` | BRK'yi Sunucunuza Davet Edersiniz\n \`${prefix}istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

@@ -23,11 +23,11 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 let eklenti = new Discord.MessageEmbed()  
-.setAuthor(`Spallers Moderasyon Komutları`, client.user.avatarURL())
+.setAuthor(`BRK Moderasyon Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
-.setDescription(` Spallers botumuzu eklemek için \`${prefix}botdavet\` yazabilirsiniz.`)
+.setDescription(` BRK botumuzu eklemek için \`${prefix}botdavet\` yazabilirsiniz.`)
 .addField(`<a:kalkan:835661236849999922> __Jail Log__`,` \`${prefix}jail-kanal ayarla\` Jail Log Kanalını Ayarlarsınız.`,true)
 .addField(`<a:kalkan:835661236849999922> __Jail Yetkili Rol__`,` \`${prefix}jail-yetkilisi ayarla \` Sadece Kimler Jail Atabilir?`,true)
 .addField(`<a:kalkan:835661236849999922> __Jail Rolü__`,` \`${prefix}jail-rol ayarla \` Jail Verilecek Rol.`,true)

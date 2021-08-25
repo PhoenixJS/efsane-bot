@@ -23,16 +23,16 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 let eklenti = new Discord.MessageEmbed()  
-.setAuthor(`Spallers Güvenlik Komutları`, client.user.avatarURL())
+.setAuthor(`BRK Güvenlik Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
-.setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<a:kalkan:835661236849999922> __Güvenlik Verilecek Rol__`,` \`s*güvenlik-verilecek-rol\` Kişi Güvenli İse Verilecek Rol.`,true)
-.addField(`<a:kalkan:835661236849999922> __Güvenlik Alınacak Rol__`,` \`s*güvenlik-alınacak-rol\` İlk Geldiğinde Verilen Rolü Seçin!.`,true)
-.addField(`<a:kalkan:835661236849999922> __Güvenlik Sahte Rol__`,` \`s*güvenlik-sahte-rol\` Kişi Güvenli Değil İse Verilecek Rol..`,true)
-.addField(`<a:kalkan:835661236849999922> __Güvenlik Log__`,` \`s*güvenlik-kanal\` Kişi Güvenilirmi Değilmi Atacağı Kanal.`,true)
-.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.setDescription(` BRK botumuzu eklemek için \`${prefix}botdavet\` yazabilirsiniz.`)  
+.addField(`<a:kalkan:835661236849999922> __Güvenlik Verilecek Rol__`,` \`${prefix}güvenlik-verilecek-rol\` Kişi Güvenli İse Verilecek Rol.`,true)
+.addField(`<a:kalkan:835661236849999922> __Güvenlik Alınacak Rol__`,` \`${prefix}güvenlik-alınacak-rol\` İlk Geldiğinde Verilen Rolü Seçin!.`,true)
+.addField(`<a:kalkan:835661236849999922> __Güvenlik Sahte Rol__`,` \`${prefix}güvenlik-sahte-rol\` Kişi Güvenli Değil İse Verilecek Rol..`,true)
+.addField(`<a:kalkan:835661236849999922> __Güvenlik Log__`,` \`${prefix}güvenlik-kanal\` Kişi Güvenilirmi Değilmi Atacağı Kanal.`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`${prefix}botdavet\` | BRK'yi Sunucunuza Davet Edersiniz\n \`${prefix}istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {
