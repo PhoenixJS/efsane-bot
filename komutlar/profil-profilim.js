@@ -54,12 +54,12 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   let yas = await db.fetch(`pyas_${user.id}`);
   let yasYazi;
   if (yas == null) yasYazi = " `Yaş ayarlanmamış!`";
-  else yasYazi = `<:sagok:778774307253518366> \`${yas}\``;
+  else yasYazi = ` \`${yas}\``;
  
   let bayrak = await db.fetch(`pbayrak_${user.id}`);
   let bYazi;
-  if (bayrak == null) bYazi = "<:sagok:778774307253518366> `Bayrak Girilmemiş.`";
-  else bYazi = `<:sagok:778774307253518366> ${bayrak}`;
+  if (bayrak == null) bYazi = " `Bayrak Girilmemiş.`";
+  else bYazi = `${bayrak}`;
  
   const embed = new Discord.MessageEmbed()
     .setAuthor(`${user.username} Adlı Kullanıcının Profili`, user.displayAvatarURL({dynamic : true}))

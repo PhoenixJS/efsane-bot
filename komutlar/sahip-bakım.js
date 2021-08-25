@@ -21,12 +21,12 @@ if(message.author.id != "627803211348312065") return message.channel.send(bakim)
   
   if(args[0] === 'aç') {
     if(db.fetch(`bakim`)) return message.channel.send('**Bakım modu zaten açık**')
-    message.channel.send('<a:tmdir:778774341357797378> | **Bakım modu açıldı.**')
+    message.channel.send(' | **Bakım modu açıldı.**')
     db.set(`bakim`, 'acik')
   }
   if(args[0] === 'kapat'){
     if(!db.fetch(`bakim`)) return message.channel.send('**Bakım modu zaten kapalı.**')
-    message.channel.send('<a:tmdir:778774341357797378> | **Bakım modu kapatıldı.**')
+    message.channel.send('| **Bakım modu kapatıldı.**')
     db.delete(`bakim`)
   }
   

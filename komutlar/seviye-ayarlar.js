@@ -19,7 +19,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
         	 let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
 
@@ -31,21 +31,21 @@ let sınır = await db.fetch(`seviyesınır${message.guild.id}`)
 
 let kanal1 = [];
 
-  if(kanal) kanal1 = `<a:dnya:778787223847829504> **Açık!**`
+  if(kanal) kanal1 = ` **Açık!**`
 
-  if(!kanal) kanal1 = `<a:dnya:778787223847829504> **Kapalı!**`
+  if(!kanal) kanal1 = ` **Kapalı!**`
 
   let xp1 = [];
 
-  if(xp) xp1 = `<a:dnya:778787223847829504> \`${xp}\``
+  if(xp) xp1 = ` \`${xp}\``
 
-  if(!xp) xp1 = `<a:dnya:778787223847829504> **Ayarlanmamış! Default: \`250\`**`
+  if(!xp) xp1 = ` **Ayarlanmamış! Default: \`250\`**`
 
 let sınır1 = [];
 
-  if(sınır) sınır1 = `<a:dnya:778787223847829504> \`${sınır}\``
+  if(sınır) sınır1 = ` \`${sınır}\``
 
-  if(!sınır) sınır1 = `<a:dnya:778787223847829504> **Ayarlanmamış! Default: \`5\`**`
+  if(!sınır) sınır1 = ` **Ayarlanmamış! Default: \`5\`**`
 
 message.channel.send(new Discord.MessageEmbed()
 

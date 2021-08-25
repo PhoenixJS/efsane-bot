@@ -20,7 +20,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
         	 let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
 
@@ -75,7 +75,7 @@ const embed = new Discord.MessageEmbed()
 return message.channel.send(embed)
       }
 
-      if(isNaN(args[1])) return message.channel.send(`<a:siren:778777832976416778> Seviye bir sayı olmalı!`)
+      if(isNaN(args[1])) return message.channel.send(` Seviye bir sayı olmalı!`)
 
       const user = message.mentions.users.first() || message.author
 
@@ -92,7 +92,7 @@ return message.channel.send(embed)
 const embed = new Discord.MessageEmbed()
 .setColor('#f6ff00')
 .setTitle('Başarılı')
-.setDescription(`<a:syes1:751896954182697051> Artık Birisi \`${level}\` Level Olunca ${role} Rolünü Vereceğim`)
+.setDescription(` Artık Birisi \`${level}\` Level Olunca ${role} Rolünü Vereceğim`)
 
 message.channel.send(embed)
   

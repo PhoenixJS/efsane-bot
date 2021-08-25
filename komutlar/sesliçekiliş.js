@@ -21,7 +21,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
        let kanal = message.guild.channels.cache.get(args[0]);
        
        if(!kanal) {
-         message.channel.send('DC Yapmak İçin Kanal İdsini Giriniz. Doğru kullanım **s*dc <sesli kanal id>**')
+         message.channel.send(`**  Sesli Çekiliş Yapmak İçin Kanal İdsini Giriniz. Doğru kullanım \`${prefix}dc KANAL ID\`**`)
        } 
         if(kanal) {
           const embed = new Discord.MessageEmbed()

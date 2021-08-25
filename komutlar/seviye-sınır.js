@@ -20,7 +20,7 @@ if(msg.author.id != "477189482206986240") return msg.channel.send(bakim)
         	 let karaliste = db.fetch(`ckaraliste.${msg.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return msg.channel.send(westraben)
 
@@ -28,7 +28,7 @@ if(msg.author.id != "477189482206986240") return msg.channel.send(bakim)
 
 .setTitle(`Uyarı`)
 
-.setDescription(`<a:siren:778777832976416778> Bu Komutu Kullanmak İçin; \`ADMINISTRATOR\` Yetkisine Sahip Olmalısın!`))
+.setDescription(`Bu Komutu Kullanmak İçin; \`ADMINISTRATOR\` Yetkisine Sahip Olmalısın!`))
 
   
 
@@ -38,21 +38,21 @@ if(msg.author.id != "477189482206986240") return msg.channel.send(bakim)
 
     db.set(`seviyesınır${msg.guild.id}`, 250)
 
-    return msg.channel.send(`<a:tmdir:778774341357797378> Seviye-Sınır Başarıyla Sıfırlandı! Varsayılan: \`500\``)
+    return msg.channel.send(` Seviye-Sınır Başarıyla Sıfırlandı! Varsayılan: \`500\``)
 
  }
 
   let sayı = args[0]
 
-  if(!sayı) return msg.channel.send(`<a:siren:778777832976416778> Seviye bir sayı olmalı!`)
+  if(!sayı) return msg.channel.send(` Seviye bir sayı olmalı!`)
 
-  if(sayı < 100) return msg.channel.send(`<a:siren:778777832976416778> En Az 100'e Kadar Bir Sayı Girebilirsiniz!`)
+  if(sayı < 100) return msg.channel.send(` En Az 100'e Kadar Bir Sayı Girebilirsiniz!`)
 
-  if(sayı > 500) return msg.channel.send(`<a:siren:778777832976416778> En Fazla 500'e Kadar Bir Sayı Girebilirsiniz!`)
+  if(sayı > 500) return msg.channel.send(` En Fazla 500'e Kadar Bir Sayı Girebilirsiniz!`)
 
   db.set(`seviyesınır${msg.guild.id}`, args[0])
 
-  return msg.channel.send("<a:tmdir:778774341357797378> Başarıyla Seviye Sınırını \`" + args[0] + "\` Olarak Ayarladınız!")
+  return msg.channel.send("Başarıyla Seviye Sınırını \`" + args[0] + "\` Olarak Ayarladınız!")
 
 };
 
