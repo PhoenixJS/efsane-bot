@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -27,11 +27,11 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 	if(!banlog) return message.channel.send('Ban log sistemi ayarlanmamış.')
     let user = message.mentions.users.first()
     let sebep = args.slice(1).join(' ') || "Belirtilmemiş."
-     if(!user) return message.channel.send('<a:siren:778777832976416778> ``Bir kişi etiketlemelisin.``')
-     if(user.id === message.author.id) return message.channel.send('<a:siren:778777832976416778> ``Kendini banlayamazsın.``')
-     if(user.id === client.user.id) return message.channel.send('<a:siren:778777832976416778> ``Botu banlayamazsın.``')
-  if(user.id === message.guild.ownerID) return message.channel.send('<a:siren:778777832976416778> ``Sunucu sahibini banlayamazsın.``')
-    if (!message.guild.member(user).bannable) return message.reply('<a:siren:778777832976416778> ``Bu kişinin rolü senden üstte veya `Üyeleri yasakla` yetkisine sahip.``');
+     if(!user) return message.channel.send(' ``Bir kişi etiketlemelisin.``')
+     if(user.id === message.author.id) return message.channel.send(' ``Kendini banlayamazsın.``')
+     if(user.id === client.user.id) return message.channel.send(' ``Botu banlayamazsın.``')
+  if(user.id === message.guild.ownerID) return message.channel.send(' ``Sunucu sahibini banlayamazsın.``')
+    if (!message.guild.member(user).bannable) return message.reply(' ``Bu kişinin rolü senden üstte veya `Üyeleri yasakla` yetkisine sahip.``');
 
    message.channel.send('<@'+ user.id + '> Kişisini **'+ sebep+ '** Sebebiyle banlamak istediğine eminmisin ?').then(async m => {
    	 m.react('✅').then(r =>{ 
@@ -47,8 +47,8 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     .setColor('#f6ff00')
     .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
     .setTitle('Kişi banlandı')
-    .addField('<:ban:778787183842426900> Yetkili', `${message.author.tag}`)
-    .addField('<:ban:778787183842426900> Banlanan kişi', user)
+    .addField(' Yetkili', `${message.author.tag}`)
+    .addField('Banlanan kişi', user)
     .addField('<:ban:778787183842426900> Sebep', sebep)
     client.channels.cache.get(banlog).send(embed)
        })
@@ -60,7 +60,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
    tamam2.on('collect', async (r)=>{
      m.delete()
-message.channel.send('<a:tmdir:778774341357797378> | **Banlama İşlemi Başarıyla İptal Edildi.**')
+message.channel.send(' | **Banlama İşlemi Başarıyla İptal Edildi.**')
       })
     })
  })

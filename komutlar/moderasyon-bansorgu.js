@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
 if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
-    if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("**Yeterli yetkiniz yok**");
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("**Yeterli yetkiniz yok**");
     let kullanici = args[0];
     if (!kullanici) return message.channel.send("**Bir kullanıcı ID girmen gerek**")
     message.guild.fetchBans()

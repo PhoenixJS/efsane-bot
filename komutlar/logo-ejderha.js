@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -23,7 +23,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 }
 
 let FwhyCode = args.slice(0).join("+");
-if (!FwhyCode) return message.channel.send("**Lütfen Bişey Yaz <a:uzi:778787233351598100>**");
+if (!FwhyCode) return message.channel.send("**Lütfen Bişey Yaz**");
 let link ="https://dynamic.brandcrowd.com/asset/logo/055241ff-dc4f-4743-90be-1c9caa0c900b/logo?v=4&text=" + FwhyCode;
 
 const EmbedFwhyCode = new Discord.MessageEmbed()

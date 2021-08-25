@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -23,7 +23,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 }
   const yazi = args.slice(0).join('+'); 
 
-  if(!yazi) return message.channel.send(`**Lütfen yazı yazınız.** <a:uzi:778787233351598100>`)
+  if(!yazi) return message.channel.send(`**Lütfen yazı yazınız.** `)
   const linqo = `https://flamingtext.com/net-fu/proxy_form.cgi?imageoutput=true&script=flame-logo&text=${yazi}`
   .replace(' ', '+')
 
