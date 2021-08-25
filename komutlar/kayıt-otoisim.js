@@ -8,7 +8,7 @@ exports.run = async(client, message, args) => {
 if (args[0] === 'sıfırla') {
   let isim = db.fetch(`otoisim_${message.guild.id}`)
   if (!isim) return message.channel.send(`Oto İsim AYarlanmadığı İçimn Sıfırlanamaz!`)
-  message.channel.send(`Oto İsim Sıfırlandı!<a:tiks:743841333692727378>`)
+  message.channel.send(`Oto İsim Sıfırlandı!`)
   db.delete(`otoisim_${message.guild.id}`)
   return;
 }
@@ -18,7 +18,7 @@ if (!isim) return message.channel.send(`İsim Belirtiniz!`)
 
 db.set(`otoisim_${message.guild.id}`, isim)
 
-message.channel.send(`Oto İsim \`${isim}\` Olarak Ayarlandı!<a:tiks:743841333692727378>`)
+message.channel.send(`Oto İsim \`${isim}\` Olarak Ayarlandı!`)
   
 }
 exports.conf = {

@@ -54,10 +54,10 @@ message.guild.channels.cache.get(logChannel).send(new Discord.MessageEmbed()
 .setColor("#f6ff00")
 .setTitle('BRK - Sesli Mute Sistem')
 .setDescription(`
-<:sagok:778774307253518366> **Kullanan Yetkili:** ${message.author.tag}
-<:sagok:778774307253518366> **Kullanılan kişi:** ${member.user.tag}
-<:sagok:778774307253518366> **Açıklama:** ${reason}
-<:sagok:778774307253518366> **Ceza Süre:** ${args[1]}`)
+ **Kullanan Yetkili:** ${message.author.tag}
+ **Kullanılan kişi:** ${member.user.tag}
+ **Açıklama:** ${reason}
+ **Ceza Süre:** ${args[1]}`)
 .setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png'));
 member.voice.setMute(true);
 
@@ -66,7 +66,7 @@ setTimeout(() => {
 message.guild.channels.cache.get(logChannel).send(new Discord.MessageEmbed()
 .setTitle(' BRK - Sesli  Mute Sistem').setColor("#f6ff00")
 .setDescription(`
-<:sagok:778774307253518366> ${member.user} **kullanıcısının sesli mute süresi bitti!**
+ ${member.user} **kullanıcısının sesli mute süresi bitti!**
 `))
 member.voice.setMute(false);
 }, cooldown);

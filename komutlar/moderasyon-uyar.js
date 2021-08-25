@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Yetkin yok.:x:`)
 
-if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setColor('#f6ff00').setTitle('<a:siren:778777832976416778> Yanlış Kullanım!').setDescription('**Hatalı Komut Kullanımı Doğru Kullanımı :** \n`s*uyarı ekle` \n`s*uyarı sil` \n`s*uyarı say`'))
+if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setColor('#f6ff00').setTitle('Yanlış Kullanım!').setDescription('**Hatalı Komut Kullanımı'))
 
 
 if(args[0] === 'ekle') {
