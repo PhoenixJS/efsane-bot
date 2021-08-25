@@ -11,20 +11,20 @@ var embed = new Discord.MessageEmbed()
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setColor('#f6ff00')
 .setDescription(`
-●▬▬▬ <a:hkalp:781708345480183839> **Kayıt İstatistikleri** <a:hkalp:781708345480183839> ▬▬▬●
+●▬▬▬  **Kayıt İstatistikleri** ▬▬▬●
 
-           > <a:ayar:783796256015122454>     • \`Yetkili\` • **${kişi}**
-           > <a:ayar:783796256015122454>     • \`Toplam Üye Kayıt Sayısı\` • **${toplam}**
-           > <a:ayar:783796256015122454>     • \`Toplam Erkek Kayıt Sayısı\` • **${erkek}**
-           > <a:ayar:783796256015122454>     • \`Toplam Kadın Kayıt Sayısı\` • **${kız}**
+           > <a:sag:835661239664902164>     • \`Yetkili\` • **${kişi}**
+           > <a:sag:835661239664902164>     • \`Toplam Üye Kayıt Sayısı\` • **${toplam}**
+           > <a:sag:835661239664902164>     • \`Toplam Erkek Kayıt Sayısı\` • **${erkek}**
+           > <a:sag:835661239664902164>    • \`Toplam Kadın Kayıt Sayısı\` • **${kız}**
               
-●▬▬▬ <a:hkalp:781708345480183839> **Kayıt  İstatistikleri** <a:hkalp:781708345480183839> ▬▬▬●
+●▬▬▬  **Kayıt  İstatistikleri** ▬▬▬●
 
 
 
 
 `)
-.setImage('https://cdn.discordapp.com/attachments/767544528537649193/782343767943413810/standard_3.gif')
+.setImage('')
 message.reply(embed)
 
 }
