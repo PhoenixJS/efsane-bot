@@ -2,7 +2,8 @@ const db = require("croxydb");
 const Discord = require('discord.js');
 const fynx = require("../ayarlar.json");
 exports.run = async (client, message, args) => { 
-    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
+let prefix = fynx.prefix
+let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
  .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
@@ -27,17 +28,17 @@ let eklenti = new Discord.MessageEmbed()
 .setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
 .setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<:sagok:778774307253518366> __Kayıt Alınacak Rol__`,` \`alınacak-rol\` Kayıt Edince Alınacak Rol`,true)
-.addField(`<:sagok:778774307253518366> __Erkek Rol__`,` \`s*erkek-rol\` Erkek Rolü Belirtirsiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Erkek Kayıt__`,` \`s*erkek @etiket <isim> <yaş>\`Erkek Kayıt Edersiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Kayıt Hoşgeldin__`,` \`s*kayıt-hg\`  Kayıt Hoşgeldin Kanalı Belirtirsiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Kayıt Kanal__`,` \`s*kayıt-kanal\` Kayıtın Yapılacağı Kanalı Ayarlarsınız. `,true)
-.addField(`<:sagok:778774307253518366> __Kayıtçı Rol__`,` \`s*kayıtçı-rol\`  Sadece Kimler Kayıt Edebilir.`,true)
-.addField(`<:sagok:778774307253518366> __Kız Rol__`,` \`s*kız-rol\` Kız Rolü Belirtirsiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Kız Kayıt__`,` \`s*kız @etiket <isim> <yaş>\`Kız Kayıt Edersiniz.`,true)
-.addField(`<:sagok:778774307253518366> __Tag__`,` \`s*tagayarla <tag>\` Kayıt Olanlara Tag Verir.`,true)
-.addField(`<:sagok:778774307253518366> __Kayıt Sayacı__`,` \`s*toplam-kayıt\` Kaç Adet Kayıt Yaptığınızı Görürsünüz.`,true)
-.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.addField(`<:sagok:778774307253518366> __Kayıt Alınacak Rol__`,` \`${prefix}alınacak-rol\` Kayıt Edince Alınacak Rol`,true)
+.addField(`<:sagok:778774307253518366> __Erkek Rol__`,` \`${prefix}erkek-rol\` Erkek Rolü Belirtirsiniz.`,true)
+.addField(`<:sagok:778774307253518366> __Erkek Kayıt__`,` \`${prefix}erkek @etiket <isim> <yaş>\`Erkek Kayıt Edersiniz.`,true)
+.addField(`<:sagok:778774307253518366> __Kayıt Hoşgeldin__`,` \`${prefix}kayıt-hg\`  Kayıt Hoşgeldin Kanalı Belirtirsiniz.`,true)
+.addField(`<:sagok:778774307253518366> __Kayıt Kanal__`,` \`${prefix}kayıt-kanal\` Kayıtın Yapılacağı Kanalı Ayarlarsınız. `,true)
+.addField(`<:sagok:778774307253518366> __Kayıtçı Rol__`,` \`${prefix}kayıtçı-rol\`  Sadece Kimler Kayıt Edebilir.`,true)
+.addField(`<:sagok:778774307253518366> __Kız Rol__`,` \`${prefix}kız-rol\` Kız Rolü Belirtirsiniz.`,true)
+.addField(`<:sagok:778774307253518366> __Kız Kayıt__`,` \`${prefix}kız @etiket <isim> <yaş>\`Kız Kayıt Edersiniz.`,true)
+.addField(`<:sagok:778774307253518366> __Tag__`,` \`${prefix}tagayarla <tag>\` Kayıt Olanlara Tag Verir.`,true)
+.addField(`<:sagok:778774307253518366> __Kayıt Sayacı__`,` \`${prefix}toplam-kayıt\` Kaç Adet Kayıt Yaptığınızı Görürsünüz.`,true)
+.addField(`<:sagok:778774307253518366> __Bilgilendirme__`,` \`${prefix}botdavet\` | BRK Sunucunuza Davet Edersiniz\n \`${prefix}istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {
