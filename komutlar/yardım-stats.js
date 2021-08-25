@@ -23,15 +23,15 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 let eklenti = new Discord.MessageEmbed()  
-.setAuthor(`Spallers Kullanıcı Komutları`, client.user.avatarURL())
+.setAuthor(`BRK Stats Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
-.setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<a:kalkan:835661236849999922> __İstatistiğim__`,` \`s*istatistiğim\`Kendi istatistiğinizi görürsünüz.`,true)
-.addField(`<a:kalkan:835661236849999922> __Sıralama__`,` \`s*top\` Sunucududa istatistiklerde ilk 5i gösterir.`,true)
-.addField(`<a:kalkan:835661236849999922> __Reset__`,` \`s*reset\` Sunucudaki istatistikleri sıfırlar..`,true)
-.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.setDescription(` Spallers botumuzu eklemek için \`${prefix}botdavet\` yazabilirsiniz.`)  
+.addField(`<a:kalkan:835661236849999922> __İstatistiğim__`,` \`${prefix}istatistiğim\`Kendi istatistiğinizi görürsünüz.`,true)
+.addField(`<a:kalkan:835661236849999922> __Sıralama__`,` \`${prefix}top\` Sunucududa istatistiklerde ilk 5i gösterir.`,true)
+.addField(`<a:kalkan:835661236849999922> __Reset__`,` \`${prefix}reset\` Sunucudaki istatistikleri sıfırlar..`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`${prefix}botdavet\` | BRK'yi Sunucunuza Davet Edersiniz\n \`${prefix}istatistik\` | Botun İstatistiklerini Gösterir `)
  message.channel.send(eklenti) 
   };
   exports.conf = {

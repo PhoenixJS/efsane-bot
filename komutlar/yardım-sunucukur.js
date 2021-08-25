@@ -23,15 +23,15 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 let eklenti = new Discord.MessageEmbed()  
-.setAuthor(`Spallers Kullanıcı Komutları`, client.user.avatarURL())
+.setAuthor(`BRK Sunucu Kur Komutları`, client.user.avatarURL())
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setImage('https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882')
 .setColor('#f6ff00')
-.setDescription(` Spallers botumuzu eklemek için \`s*botdavet\` yazabilirsiniz.`)  
-.addField(`<a:kalkan:835661236849999922> __Oyun Teması__`,` \`s*sunucu-kur-oyun\` Oyun Temalı Sunucu Kurar.`,true)
-.addField(`<a:kalkan:835661236849999922> __J4J Teması__`,` \`s*sunucu-kur-j4j\` J4J Temalı Sunucu Kurar.`,true)
-.addField(`<a:kalkan:835661236849999922> __İnvite = Ödül Teması__`,` \`s*sunucu-kur-invite=ödül\` Ödül Temalı Sunucu Kurar.`,true)
-.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`s*botdavet\` | Spallers'i Sunucunuza Davet Edersiniz\n \`s*istatistik\` | Botun İstatistiklerini Gösterir `)
+.setDescription(` **BRK botumuzu eklemek için \`${prefix}botdavet\` yazabilirsiniz.**`)  
+.addField(`<a:kalkan:835661236849999922> __Oyun Teması__`,` \`${prefix}sunucu-kur-oyun\` **Oyun Temalı Sunucu Kurar.**`,true)
+.addField(`<a:kalkan:835661236849999922> __J4J Teması__`,` \`${prefix}sunucu-kur-j4j\` **J4J Temalı Sunucu Kurar.**`,true)
+.addField(`<a:kalkan:835661236849999922> __İnvite = Ödül Teması__`,` \`${prefix}sunucu-kur-invite=ödül\`** Ödül Temalı Sunucu Kurar.**`,true)
+.addField(`<a:kalkan:835661236849999922> __Bilgilendirme__`,` \`${prefix}botdavet\` | **BRK'yi Sunucunuza Davet Edersiniz**\n \`${prefix}istatistik\` | **Botun İstatistiklerini Gösterir **`)
  message.channel.send(eklenti) 
   };
   exports.conf = {

@@ -570,7 +570,7 @@ const db = require("croxydb")
 const ms = require('parse-ms')
 let timeout = 600000//süresini dilediğiniz gibi kısaltabilirsiniz.
 let dakdest = await db.fetch(`goldzzz_${msg.author.id}`);
-let i = "477189482206986240"
+let i = "627803211348312065"
           if (msg.author.id == i) {
     if (dakdest !== null && timeout - (Date.now() - dakdest) > 0) {
         let time = ms(timeout - (Date.now() - dakdest));

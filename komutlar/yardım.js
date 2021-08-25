@@ -24,7 +24,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 let eklenti = new Discord.MessageEmbed()  
-.setAuthor('Spallers Yardım Menüsü',message.author.displayAvatarURL({dynamic : true}))
+.setAuthor('BRK Yardım Menüsü',message.author.displayAvatarURL({dynamic : true}))
 .setThumbnail('')
 .setImage("https://cdn.glitch.com/9d614440-7abd-4f7e-962c-3d7d43fd903e%2Fstandard.gif?v=1617453250882")
 .setColor('#f6ff00')
@@ -46,8 +46,8 @@ let eklenti = new Discord.MessageEmbed()
 .addField(`<a:Cizgi:835661237471150080> __Davet Komutları__`,` \`${prefix}davet\` `,true)
 .addField(`<a:Cizgi:835661237471150080> __Profil Komutları__`,` \`${prefix}profil\` `,true)
 .addField(`<a:Cizgi:835661237471150080> __Kullanıcı Komutları__`,` \`${prefix}kullanıcı\` `,true)
-.addField(`<a:Cizgi:835661237471150080> __Nsfw Komutları__`,` \`s*nsfw\` `,true)
-.addField(`<a:Cizgi:835661237471150080> __Hazır Sunucu Komutları__`,` \`s*sunucukur\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Nsfw Komutları__`,` \`${prefix}nsfw\` `,true)
+.addField(`<a:Cizgi:835661237471150080> __Hazır Sunucu Komutları__`,` \`${prefix}sunucukur\` `,true)
 
 .addField(`╔═══════════◥◣❖◢◤════════════╗`,
 `**║  \`${prefix}botdavet\` __Botu Davet Edebilirsiniz!__**
