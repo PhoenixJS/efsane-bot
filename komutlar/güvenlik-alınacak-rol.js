@@ -5,7 +5,7 @@ exports.run = async (bot, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -27,7 +27,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     if (!c) return message.channel.send("Lütfen bir rol belirtiniz!");
     db.set(`güvenlikalınacak_${message.guild.id}`, c.id);
     message.channel.send(
-      `Security role is set to <@&${c.id}>!`
+      `güvenlik Alınacak Rol = <@&${c.id}>!`
     );
    
 };

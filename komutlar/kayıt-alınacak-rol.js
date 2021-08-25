@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(` **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -22,14 +22,14 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
 
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<a:siren:778777832976416778> Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
 
 if(args[0] === "sıfırla") {
 const sıfırlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Alınacak rolü sıfırlama komutu.`)
 .setColor("#f6ff00")
-.setDescription(`<a:siren:778777832976416778> Kayıt olunca otomatik alınacak rol sıfırlandı!`)
+.setDescription(` Kayıt olunca otomatik alınacak rol sıfırlandı!`)
 .setThumbnail(client.user.avatarURL())
 .setFooter(`Spallers`)
 message.channel.send(sıfırlandı)

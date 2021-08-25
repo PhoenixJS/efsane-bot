@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
     if(db.fetch(`bakim`)) {
@@ -22,7 +22,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 }
 
     
-if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<a:siren:778777832976416778> Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
+if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
 
 
 if(args[0] === "sıfırla") {
@@ -30,7 +30,7 @@ const sıfırlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Hoş geldin kanalını sıfırlama komutu.`)
 .setColor("#f6ff00")
-.setDescription(`<a:siren:778777832976416778> Hoş geldin kanalı başarıyla sıfırlandı!`)
+.setDescription(` Hoş geldin kanalı başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Spallers`)
 message.channel.send(sıfırlandı)
@@ -44,7 +44,7 @@ if (!kanal) {
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Hoş geldin kanalını ayarlama komutu.`)
 .setColor("#f6ff00")
-.setDescription(`<a:siren:778777832976416778> Hoş geldin kanalı belirtiniz!`)
+.setDescription(` Hoş geldin kanalı belirtiniz!`)
 .setThumbnail(client.user.avatarURL())
 .setFooter(`Spallers`)
 message.channel.send(ayarlanmadı)
@@ -54,7 +54,7 @@ const ayarlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Hoş geldin kanalını ayarlama komutu.`)
 .setColor("#f6ff00")
-.setDescription(`<a:tmdir:778774341357797378> Hoş geldin kanalı ${kanal} olarak ayarlandı!`)
+.setDescription(` Hoş geldin kanalı ${kanal} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL())
 .setFooter(`Spallers`)
 message.channel.send(ayarlandı)

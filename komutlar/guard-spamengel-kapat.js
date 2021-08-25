@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
  let karaliste = data.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
   
@@ -22,12 +22,12 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 }
   const nn = new Discord.MessageEmbed().setThumbnail();
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`<a:siren:778777832976416778> Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
 const sistem = await data.fetch(`spam.${message.guild.id}`);
-if(!sistem) return message.channel.send(nn.setDescription(`<a:siren:778777832976416778> Spam koruma zaten aktif değil.`)).then(a => a.delete({timeout: 10000}));
+if(!sistem) return message.channel.send(nn.setDescription(`Spam koruma zaten aktif değil.`)).then(a => a.delete({timeout: 10000}));
 
 data.delete(`spam.${message.guild.id}`);
-return message.channel.send(nn.setTitle(`İşlem başarılı!`).setColor(0x36393F).setDescription(`<a:siren:778777832976416778> Spam koruma başarıyla kapatıldı.`)).then(a => a.delete({timeout: 10000}));
+return message.channel.send(nn.setTitle(`İşlem başarılı!`).setColor(0x36393F).setDescription(` Spam koruma başarıyla kapatıldı.`)).then(a => a.delete({timeout: 10000}));
 
 };
 exports.conf = {

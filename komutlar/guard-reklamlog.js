@@ -23,20 +23,20 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     let reklam = db.fetch(`reklam.${message.guild.id}.durum`)
   const member3 = new Discord.MessageEmbed()
   .setColor('#f6ff00')
-  .setDescription(`<a:siren:778777832976416778> **HATA** <a:siren:778777832976416778> - Bu sunucuda yetkili değilsin.`)
+  .setDescription(` - Bu sunucuda yetkili değilsin.`)
         if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send(member3)
     const member = new Discord.MessageEmbed()
 .setColor('#f6ff00')
-.setDescription(`<a:siren:778777832976416778> **HATA** <a:siren:778777832976416778> - Bir kanal etiketle.`)
+.setDescription(`- Bir kanal etiketle.`)
       if(reklam) {
         let kanal = message.mentions.channels.first()
         if(!kanal) return message.channel.send(member)
       db.set(`reklam.${message.guild.id}.kanal`,kanal.id)
-      message.channel.send(`<a:tmdir:778774341357797378> **Başarılı ile reklam log kanalı ayarlandı.** `).then(l => {
+      message.channel.send(` **Başarılı ile reklam log kanalı ayarlandı.** `).then(l => {
       l.delete({timeout: 5000})
     })
     }else{
-     message.channel.send(`<a:tmdir:778774341357797378> **Reklam engel açık değil.**`).then(l => {
+     message.channel.send(` **Reklam engel açık değil.**`).then(l => {
       l.delete({timeout: 5000})
     })
     }

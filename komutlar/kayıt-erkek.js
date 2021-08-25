@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/tuG87ZadFu) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
     if(db.fetch(`bakim`)) {
@@ -30,17 +30,17 @@ let tag = db.fetch(`tag.${message.guild.id}`);
 
 
  
-if(!message.member.roles.cache.has(kayıtçı)) return message.channel.send(`**<a:siren:778777832976416778> Bu komudu kullanabilmen için <@&${kayıtçı}> adlı role sahip olman lazım!**`)
-if(message.channel.id !== kanal) return message.channel.send(`**<a:siren:778777832976416778> Bu komudu sadece <#${kanal}> adlı kanalda kullanabilirsin!**`)
-if (!erkekrol) return message.channel.send(`**<a:siren:778777832976416778> Sunucuda erkek rolü ayarlanmadığı için komut kullanılamaz!**`)
+if(!message.member.roles.cache.has(kayıtçı)) return message.channel.send(`** Bu komudu kullanabilmen için <@&${kayıtçı}> adlı role sahip olman lazım!**`)
+if(message.channel.id !== kanal) return message.channel.send(`** Bu komudu sadece <#${kanal}> adlı kanalda kullanabilirsin!**`)
+if (!erkekrol) return message.channel.send(`** Sunucuda erkek rolü ayarlanmadığı için komut kullanılamaz!**`)
 
 
 let member = message.mentions.members.first();
-if (!member) return message.channel.send(`**<a:siren:778777832976416778> Erkek olarak kayıt edeceğin kullanıcıyı belirtmelisin!**`)
+if (!member) return message.channel.send(`** Erkek olarak kayıt edeceğin kullanıcıyı belirtmelisin!**`)
 let isim = args[1]
-if (!isim) return message.channel.send(`**<a:siren:778777832976416778> İsmini belirtmelisin!**`)
+if (!isim) return message.channel.send(`** İsmini belirtmelisin!**`)
 let yaş = args[2]
-if (!yaş) return message.channel.send(`**<a:siren:778777832976416778> Yaşını belirtmelisin!**`)
+if (!yaş) return message.channel.send(`**Yaşını belirtmelisin!**`)
 if(isim && member) member.setNickname(`${n} ${isim} | ${yaş}`); 
 if(isim && !n) member.setNickname(`${isim} | ${yaş}`);
 member.roles.remove(alınacakrol)
@@ -51,16 +51,16 @@ let kayıtsohbet = db.fetch(`kayıtsohbet_${message.guild.id}`)
 db.add(`erkekpuan_${message.author.id}`, 1)
   const hg = new discord.MessageEmbed()
 .setColor('#f6ff00')
-.setDescription('<a:hype:778788019548454912> KAYIT BİLGİLERİN ŞUNLAR ;')
-.addField( `**Kaydın Başarıyla Yapıldı! <a:tmdir:778774341357797378>**`,
-    `<:sagok:778774307253518366> **Kayıt Edilen Kişi: ${kayıtolan}**
-     <:sagok:778774307253518366> **Kayıt Eden Yetkili: ${message.author}**
-     <:sagok:778774307253518366> **Kayıt İşleminde Verilen Rol: <@&${erkekrol}>**
-     <:sagok:778774307253518366> **Kayıt İşleminde Alınan Rol: <@&${alınacakrol}>**
-     <:sagok:778774307253518366> **Eski İsim: ${tag} İsim | Yaş**
-     <:sagok:778774307253518366> **Yeni İsim: ${tag} ${isim} | ${yaş}** 
+.setDescription(' KAYIT BİLGİLERİN ŞUNLAR ;')
+.addField( `**Kaydın Başarıyla Yapıldı! **`,
+    ` **Kayıt Edilen Kişi: ${kayıtolan}**
+      **Kayıt Eden Yetkili: ${message.author}**
+      **Kayıt İşleminde Verilen Rol: <@&${erkekrol}>**
+      **Kayıt İşleminde Alınan Rol: <@&${alınacakrol}>**
+      **Eski İsim: ${tag} İsim | Yaş**
+      **Yeni İsim: ${tag} ${isim} | ${yaş}** 
    `)
-.setFooter(`TAG Ayarlanmadıysa Undefined Yazması Normaldir!`);
+.setFooter(`TAG Ayarlanmadıysa **Undefined** Yazması Normaldir!`);
 message.guild.channels.cache.get(kayıtsohbet).send(hg);
 
 const başarılı = new discord.MessageEmbed()
@@ -68,10 +68,10 @@ const başarılı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Erkek Kayıt`)
 .setColor("#f6ff00")
-.setDescription(`<a:tmdir:778774341357797378> Erkek olarak kayıt edilen kullanıcı: ${member} \n Erkek olarak kayıt eden yetkili: <@!${message.author.id}>`)
+.setDescription(` Erkek olarak kayıt edilen kullanıcı: ${member} \n Erkek olarak kayıt eden yetkili: <@!${message.author.id}>`)
 .addField(`Kullanıcının ismi:`, `${isim}`, true)
 .addField(`Kullanıcının yaşı:`, `${yaş}`, true)
-.setFooter(`Spallers Kayıt Sistemi`)
+.setFooter(`BRK Kayıt Sistemi`)
 message.channel.send(başarılı)
 }
 exports.conf = {
