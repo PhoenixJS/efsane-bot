@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const  db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 module.exports.run = async (client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
@@ -23,7 +23,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 }
   if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`** Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.**`);
   let kontrol = await db.fetch(`dil_${message.guild.id}`);
-  if (kontrol == "agayokaga") {// BU ALTYAPI TAMAMEN westra.dcw ʷʰʸ#9999 VE ⍭ Yiğit#6523 AİTTİR
+  if (kontrol == "agayokaga") {
     let kanal = await db.fetch(`bank_${message.guild.id}`)
     if (!kanal) {
       const embed = new Discord.MessageEmbed()

@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const ayarlar = require("../ayarlar.json")
 const db = require('croxydb');
 
 
@@ -39,11 +40,11 @@ let westrabotlistyetkilisi = db.fetch(`westrabotlistyetkilirol_${message.guild.i
   message.delete()
    const westrabumbeyyyy = new Discord.MessageEmbed()
     .setColor(`RED`)
-    .setFooter(`Spallers BotList Sistemi`)
+    .setFooter(`BRK BotList Sistemi`)
     .setTimestamp()
-    .setDescription(`<a:siren:778777832976416778> <@${sahip}> adlı kişinin <@${botisim}> adlı botu reddedildi. \n**Sebep:** \`${sebep}\` \n**Reddeden yetkili:** ${message.author}`)
+    .setDescription(` <@${sahip}> adlı kişinin <@${botisim}> adlı botu reddedildi. \n**Sebep:** \`${sebep}\` \n**Reddeden yetkili:** ${message.author}`)
 		client.channels.cache.get(log).send(westrabumbeyyyy);// 
-		message.channel.send(`<a:okk:778774339259859002> Botu reddettiniz.`).then(x => x.delete({timeout: 3000}))
+		message.channel.send(` Botu reddettiniz.`).then(x => x.delete({timeout: 3000}))
 };
 
 exports.conf = {

@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const ayarlar = require("../ayarlar.json")
 const client = new Discord.Client();
 const db = require('croxydb');
 module.exports.run = async (client, message, args) => {
@@ -29,7 +30,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
       return;
     }
  db.set(`westrabasvurugidecekkanal_${message.guild.id}`, kanal.id);
-  message.channel.send(`<a:okk:778774339259859002> Başvuru gidecek kanal başarıyla ${kanal} olarak ayarlandı!`)
+  message.channel.send(` Başvuru gidecek kanal başarıyla ${kanal} olarak ayarlandı!`)
 }
 
 exports.conf = {

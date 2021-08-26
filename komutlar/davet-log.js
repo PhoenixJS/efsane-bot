@@ -1,7 +1,9 @@
 const discord = require('discord.js')
+const ayarlar = require("../ayarlar.json")
 const db = require('croxydb');
 
 exports.run = async(client, message, args) => {
+let prefix = ayarlar.prefix
   let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
  .setColor(`RED`)
@@ -26,7 +28,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
  if (!message.member.hasPermission('ADMINISTRATOR'))
         return message.channel.send('** **Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın! ****')
 	
-    if(!args[0])  return message.channel.send(new discord.MessageEmbed().setColor('#f6ff00').setDescription('> **Davet-Log Sisteminde ne yapmak istediğini belirtmedin** \n> `s*davet-log ayarla #kanal` **Davet-Log Sistemini Ayarlar** \n> `q!davet-log sıfırla` **Davet-Log Sistemini Sıfırlar.**'))
+    if(!args[0])  return message.channel.send(new discord.MessageEmbed().setColor('#f6ff00').setDescription(` **Davet-Log Sisteminde ne yapmak istediğini belirtmedin** \n> ${prefix}davet-log ayarla #kanal **Davet-Log Sistemini Ayarlar** \n> ${prefix}davet-log sıfırla **Davet-Log Sistemini Sıfırlar.**`))
 
 if (args[0] === 'sıfırla') {
   let seviyelog = db.fetch(`davetlog_${message.guild.id}`)

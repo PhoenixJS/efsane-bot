@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const ayarlar = require("../ayarlar.json")
 const client = new Discord.Client();
 const db = require('croxydb');
 module.exports.run = async (client, message, args) => {

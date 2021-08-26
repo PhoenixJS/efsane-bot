@@ -1,6 +1,6 @@
-const Discord = require("discord.js");//NWA
+const Discord = require("discord.js");
 const db = require('croxydb');
-exports.run = (client, message, args) => {//NWA
+exports.run = (client, message, args) => {
     if(db.fetch(`bakim`)) {
   const bakim = new Discord.MessageEmbed()
   .setColor("#f6ff00")
@@ -22,7 +22,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   
   if (args[0] == "aç") {//NWA
     if (db.has(`antiraidK_${message.guild.id}`) === true) {
-      return message.channel.send("Anti-raid zaten açılmış.");//NWA
+      return message.channel.send("Anti-raid zaten açılmış.");
     }
     db.set(`antiraidK_${message.guild.id}`, "anti-raid-aç");//NWA
     message.reply("Anti-raid sistemi başarıyla açıldı");//NWA

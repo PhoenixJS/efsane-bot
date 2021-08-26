@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 module.exports.run = async (client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
