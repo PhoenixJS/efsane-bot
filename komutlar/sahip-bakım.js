@@ -1,7 +1,8 @@
 const Discord = require('discord.js')
 const db = require("croxydb");
-
+const ayarlar = require('../ayarlar.json')
 exports.run = (client, message, args) => {
+let prefix = ayarlar.prefix
       if(db.fetch(`bakim`)) {
   const bakim = new Discord.MessageEmbed()
   .setColor("#f6ff00")
@@ -17,7 +18,7 @@ if(message.author.id != "627803211348312065") return message.channel.send(bakim)
   
   if(message.author.id != "627803211348312065") return //Bot sahip id
   
-  if(!args[0]) return message.channel.send('**Bakım modunu açmak için s*bakım aç**')
+  if(!args[0]) return message.channel.send(`**Bakım modunu açmak için ${prefix}bakım aç**`)
   
   if(args[0] === 'aç') {
     if(db.fetch(`bakim`)) return message.channel.send('**Bakım modu zaten açık**')

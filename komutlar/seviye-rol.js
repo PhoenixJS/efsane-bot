@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 
 const db = require("croxydb");
-
-const ayarlar = require("../ayarlar.json")
+const ayarlar = require('../ayarlar.json');
 
 exports.run = async (client, message, args) => {
+let prefix = ayarlar.prefix
   if(db.fetch(`bakim`)) {
   const bakim = new Discord.MessageEmbed()
   .setColor("#f6ff00")
@@ -50,11 +50,11 @@ return message.channel.send(new Discord.MessageEmbed()
 
 .setFooter(`${client.user.username} Seviye-Rol Sistemi!`, client.user.avatarURL())  
 
-.addField(`Rol oluşturma:`, `\`${p}seviye-rol @etiket <seviye>\``)
+.addField(`Rol oluşturma:`, `\`${prefix}seviye-rol @etiket <seviye>\``)
 
-.addField(`Tüm rolleri silme:`, `\`${p}seviye-rol temizle\``)
+.addField(`Tüm rolleri silme:`, `\`${prefix}seviye-rol temizle\``)
 
-.addField(`Ayarlanan Rolleri Görmek:`, `\`${p}seviyerolleri\``)) 
+.addField(`Ayarlanan Rolleri Görmek:`, `\`${prefix}seviyerolleri\``)) 
 
 }
 

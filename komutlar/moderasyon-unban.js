@@ -3,7 +3,7 @@ const db = require('croxydb')
 const ayarlar = require('../ayarlar.json')
 const client = new Discord.Client();
 exports.run = (client, message, args, member ) => {
-
+    let prefix = ayarlar.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -47,7 +47,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   if (!user) {
     const bid = new Discord.MessageEmbed()
     .setColor('#f6ff00')
-    .setDescription(`**Banı kaldırılacak kişinin ID numarasını yazmalısın!**\n Doğru Kullanım:${prefix}unban İD sebep`)
+    .setDescription(`**Banı kaldırılacak kişinin ID numarasını yazmalısın!**\n => Doğru Kullanım: **${prefix}unban İD sebep**`)
    .setTimestamp() 
     .setFooter(`BRK Ban Sistemi`)
    return message.channel.send(bid).catch(console.error);

@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
-
+const ayarlar = require('../ayarlar.json');
 let tavsiye = args.join(" ").slice(0);
   const sebep2 = new Discord.MessageEmbed()
-  .setDescription(` \`${message.author.username}\` **Tavsiyenize Yazar mısın ?**`)
+  .setDescription(` \`${message.author.username}\` **Tavsiyenizi Yazar mısın ?**`)
   .setColor("#f6ff00")
   .setFooter(`BRK Bot Tavsiye Sistemi`)
   if(!tavsiye) return message.channel.send(sebep2);

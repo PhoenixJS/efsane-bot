@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const ayarlar = require('../ayarlar.json');
 exports.run = (bot, message) => {
   const guildArray = bot.guilds.cache.array()
   while (guildArray.length) {

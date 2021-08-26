@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const db = require("croxydb");
-
+const ayarlar = require('../ayarlar.json')
 exports.run = async(cclient, message, args) => {
 
 if(message.author.id !== "627803211348312065") return message.channel.send(" Bu komutu sadece sahiplerim kullanabilir.")
@@ -13,7 +13,7 @@ const westra = new Discord.MessageEmbed()
 .setColor("#f6ff00")
 .setTimestamp()
 .setDescription(` **${cuser.tag}** kullanıcısı karalisteden çıkarıldı.`)
-  cclient.channels.cache.get("781591808890896394").send(westra)
+  cclient.channels.cache.get("880366764272254996").send(westra)
 db.delete(`ckaraliste.${cuser.id}`)
 
 }

@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const data = require('croxydb');
 const ms = require('ms');
-
+const ayarlar = require('../ayarlar.json')
 exports.run = async (client, message, args) => {
+let prefix = ayarlar.prefix
 const logChannel = await data.fetch(`mute.log.${message.guild.id}`);
 const muteYetkili = await data.fetch(`muteyetki.role.${message.guild.id}`);
 if(!logChannel) return;
@@ -17,8 +18,8 @@ if(!message.member.permissions.has(muteYetkili)) return message.channel.send(err
 if(!args[0]) return message.channel.send(errorEmbed.setTitle('Bir hata oldu!').setDescription(`Kullanıcı etiketleyerek dener misin?
 
 **Örnek olarak**:
-\`\`\`${client.ayarlar.prefix}unsesmute @üyeetiketi
-${client.ayarlar.prefix}unsesmute 686185592899633200\`\`\``));
+\`\`\`${prefix}unsesmute @üyeetiketi
+${prefix}unsesmute 686185592899633200\`\`\``));
 
 let member;
 if(message.mentions.members.first()) {
@@ -28,8 +29,8 @@ member = message.guild.members.cache.get(args[0]);
 if(!member) return message.channel.send(errorEmbed.setTitle('Bir hata oldu!').setDescription(`Kullanıcı etiketleyerek dener misin?
 
 **Örnek olarak**:
-\`\`\`${client.ayarlar.prefix}unsesmute @üyeetiketi
-${client.ayarlar.prefix}unsesmute 686185592899633200\`\`\``));
+\`\`\`${prefix}unsesmute @üyeetiketi
+${prefix}unsesmute 686185592899633200\`\`\``));
 }
 
 if(message.author.id === member.id) return message.channel.send(new Discord.MessageEmbed().setColor("#f6ff00").setTitle('Agaa beeeeeeeee!').setDescription(`O kadar yürekli olamazsın.. 🙄`))
