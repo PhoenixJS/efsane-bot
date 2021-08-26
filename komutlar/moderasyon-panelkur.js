@@ -3,7 +3,7 @@ const db = require('croxydb')
 const ayarlar = require("../ayarlar.json")
 const fynx = require
 exports.run = async (client, message) => {
-let prefix = fynx.prefix
+let prefix = ayarlar.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")

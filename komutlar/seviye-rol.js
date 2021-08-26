@@ -32,7 +32,6 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 let link = `[Destek Sunucusu!](https://discord.gg/kqaBAxkkuX)`
 
-let p = ayarlar.prefix
 
 if(!args[0]) {
 

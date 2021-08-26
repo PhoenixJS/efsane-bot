@@ -3,7 +3,7 @@ const ayarlar = require('../ayarlar.json')
 const Discord = require('discord.js')
 const ms = require('ms')
 exports.run = async(client, message, args) => {
-let prefix = ayarlar.prefix;
+let prefix = ayarlar.prefix
 const logChannel = await data.fetch(`mute.log.${message.guild.id}`);
 const muteYetkili = await data.fetch(`muteyetki.role.${message.guild.id}`);
 if(!logChannel) return;
