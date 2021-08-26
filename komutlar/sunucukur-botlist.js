@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 const data = require('croxydb');
-
+const ayarlar = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
+let prefix = ayarlar.prefix
 if(message.author.id !== message.guild.owner.user.id) return message.channel.send(
 new Discord.MessageEmbed().setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png')
 .setColor('#f6ff00')
-.setTitle('Bir hata oldu!').setDescription(`• \`s*sunucu-kur\` **kullanmak için,** \`Sunucu Sahibi\` **olmanız gerekiyor.**`)
+.setTitle('Bir hata oldu!').setDescription(`• \`${prefix}sunucu-kur\` **kullanmak için,** \`Sunucu Sahibi\` **olmanız gerekiyor.**`)
 .addField('Sunucu Sahibi', message.guild.owner.user.tag));
 
 message.channel.send(new Discord.MessageEmbed()

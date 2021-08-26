@@ -5,7 +5,7 @@ let tavsiye = args.join(" ").slice(0);
   const sebep2 = new Discord.MessageEmbed()
   .setDescription(` \`${message.author.username}\` **Tavsiyenize Yazar mısın ?**`)
   .setColor("#f6ff00")
-  .setFooter(`Spallers Bot Tavsiye Sistemi`)
+  .setFooter(`BRK Bot Tavsiye Sistemi`)
   if(!tavsiye) return message.channel.send(sebep2);
 let user = message.author.tag;
 let userid = message.author.id;
