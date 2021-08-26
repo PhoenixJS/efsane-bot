@@ -1,6 +1,6 @@
 const discord = require('discord.js')
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message, args) => {
 
     if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(`Bu Komudu Kullanabilmen İçin \`Sunucuyu Yönet\` Yetkisine Sahip Olmalısın!`);

@@ -1,6 +1,6 @@
 const discord = require('discord.js')
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
@@ -31,7 +31,7 @@ const sıfırlandı = new discord.MessageEmbed()
 .setColor("#f6ff00")
 .setDescription(` Sunucu için ayarladığınız kayıtçı rol başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(sıfırlandı)
 db.delete(`kayıtçırol_${message.guild.id}`)
 return;
@@ -45,7 +45,7 @@ if (!rol) {
 .setColor("#f6ff00")
 .setDescription(` Ayarlayacağınız kayıtçı rolü belirtiniz!`)
 .setThumbnail(client.user.avatarUR())
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlanmadı)
 }
 db.set(`kayıtçırol_${message.guild.id}`, rol.id)
@@ -55,7 +55,7 @@ const ayarlandı = new discord.MessageEmbed()
 .setColor("#f6ff00")
 .setDescription(` Kayıt edecek rol başarıyla ${rol} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlandı)
   
 }

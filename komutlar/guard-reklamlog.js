@@ -1,10 +1,11 @@
 const db = require('croxydb');
         const Discord = require("discord.js") 
+const ayarlar = require("../ayarlar.json")
 exports.run = (client, message) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
- .setDescription(`<a:siren:778777832976416778> **${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/kqaBAxkkuX) gelebilirsin!`)
+ .setDescription(`**${karaliste}** sebebiyle karalisteye alınmışsın!\nBeyaz listeye alınmak istiyorsan [BURAYA](https://discord.gg/kqaBAxkkuX) gelebilirsin!`)
   if(karaliste) 
     return message.channel.send(westraben)
    
@@ -50,6 +51,6 @@ exports.conf = {
 
 exports.help = {
   name: 'reklamlog',
-  description: 'Spallers',
-  usage: 'Spallers'
+  description: 'Guard',
+  usage: 'BRK 2 '
 }

@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async (client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
@@ -26,7 +26,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 const sistem = await db.fetch(`spam.${message.guild.id}`);
 if(sistem) return message.channel.send(nn.setDescription(`Spam koruma zaten aktif.`)).then(a => a.delete({timeout: 10000}));
 
-db.set(`spam.${message.guild.id}`, 'spallers');
+db.set(`spam.${message.guild.id}`, 'BRK');
 return message.channel.send(nn.setTitle(`İşlem başarılı!`).setColor('#f6ff00').setDescription(`Spam koruma başarıyla açıldı.`)).then(a => a.delete({timeout: 10000}));
 
 };

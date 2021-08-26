@@ -1,7 +1,8 @@
 const discord = require('discord.js')
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message, args) => {
+let prefix = ayarlar.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -33,7 +34,7 @@ const sıfırlandı = new discord.MessageEmbed()
 .setColor("#f6ff00")
 .setDescription(` Kayıt olunacak kanal başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(sıfırlandı)
 db.delete(`kayıtkanal_${message.guild.id}`)
 return;
@@ -47,7 +48,7 @@ if (!kanal) {
 .setColor("#f6ff00")
 .setDescription(` Kayıt olunacak kanalı belirtiniz!`)
 .setThumbnail(client.user.avatarURL())
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlanmadı)
 }
 db.set(`kayıtkanal_${message.guild.id}`, kanal.id)
@@ -57,7 +58,7 @@ const ayarlandı = new discord.MessageEmbed()
 .setColor("#f6ff00")
 .setDescription(` Kayıt olunacak kanal ${kanal} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL())
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlandı)
   
 }
@@ -70,5 +71,5 @@ exports.conf = {
 exports.help = {
   name: 'kayıt-kanal',
   description: 'Kayıt Olunacak Kanalı Ayarlar',
-  usage: 'dr!kayıt-kanal #kanal'
+  usage: `kayıt-kanal #kanal`
 }

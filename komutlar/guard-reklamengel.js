@@ -1,6 +1,6 @@
 const db = require('croxydb');
         const Discord = require("discord.js") 
-
+const ayarlar = require("../ayarlar.json")
 exports.run = (client, message) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
@@ -49,6 +49,6 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 
 exports.help = {
   name: 'reklamengel',
-  description: 'Spallers',
-  usage: 'Spallers'
+  description: 'Guard',
+  usage: 'BRK 2 '
 }

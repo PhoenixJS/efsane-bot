@@ -1,6 +1,6 @@
 const discord = require('discord.js')
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
@@ -65,7 +65,7 @@ const başarılı = new discord.MessageEmbed()
 .addField(`Kullanıcının ismi:`, `${isim}`, true)
 .addField(`Kullanıcının yaşı:`, `${yaş}`, true)
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
-.setFooter(`Spallers Kayıt Sistemi`)
+.setFooter(`BRK Kayıt Sistemi`)
 message.channel.send(başarılı)
 db.add(`kayıtsayı_${message.author.id}`, 1)
 }

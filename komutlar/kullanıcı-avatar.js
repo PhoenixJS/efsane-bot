@@ -1,6 +1,6 @@
 const Discord = require(`discord.js`)
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message)=> {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
@@ -31,7 +31,7 @@ const embed = new Discord.MessageEmbed()
 .setImage(user.displayAvatarURL({dynamic:true})) 
 .setTimestamp()
 .setColor('#f6ff00')
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(embed)
  }
 }
@@ -39,11 +39,11 @@ message.channel.send(embed)
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["avatar","avatarım"],
+    aliases: ["avatar","pp"],
     permLevel: 0
 }
 
 exports.help = {
-    name: 'pp',
+    name: 'avatar',
 
 }

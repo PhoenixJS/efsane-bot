@@ -1,6 +1,6 @@
 const discord = require('discord.js')
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message, args) => {
    let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
@@ -30,7 +30,7 @@ const sıfırlandı = new discord.MessageEmbed()
 .setColor("#f6ff00")
 .setDescription(` Sunucu için ayarladığınız erkek rolü başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(sıfırlandı)
 db.delete(`erkekrol_${message.guild.id}`)
 return;
@@ -42,9 +42,9 @@ if (!rol) {
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Erkek rol ayarlama komutu.`)
 .setColor("#f6ff00")
-.setDescription(`<a:siren:778777832976416778> Ayarlayacağınız erkek rolünü belirtiniz!`)
+.setDescription(` Ayarlayacağınız erkek rolünü belirtiniz!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlanmadı)
 }
 db.set(`erkekrol_${message.guild.id}`, rol.id)
@@ -52,9 +52,9 @@ const ayarlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Erkek rol ayarlama komutu.`)
 .setColor("#f6ff00")
-.setDescription(`<a:tmdir:778774341357797378> Erkek rolü başarıyla ${rol} olarak ayarlandı!`)
+.setDescription(` Erkek rolü başarıyla ${rol} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlandı)
   
 }

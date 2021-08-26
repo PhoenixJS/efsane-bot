@@ -1,11 +1,12 @@
 
 const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json")
 module.exports.run = async (bot, message, args) => {
 let bug = args.join(" ").slice(0);
   const sebep2 = new Discord.MessageEmbed()
   .setDescription(` \`${message.author.username}\` **Bug Söyler misin ?**`)
   .setColor("#f6ff00")
-  .setFooter(`Bug Sistemi.`)
+  .setFooter(`BRK Bug Sistemi.`)
   if(!bug) return message.channel.send(sebep2);
 let user = message.author.tag;
 let guild = message.guild.name;

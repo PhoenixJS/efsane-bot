@@ -1,6 +1,6 @@
 const discord = require('discord.js')
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new discord.MessageEmbed()
@@ -32,7 +32,7 @@ const sıfırlandı = new discord.MessageEmbed()
 .setColor("#f6ff00")
 .setDescription(` Hoş geldin kanalı başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(sıfırlandı)
 db.delete(`kayıthg_${message.guild.id}`)
 return;
@@ -46,7 +46,7 @@ if (!kanal) {
 .setColor("#f6ff00")
 .setDescription(` Hoş geldin kanalı belirtiniz!`)
 .setThumbnail(client.user.avatarURL())
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlanmadı)
 }
 db.set(`kayıthg_${message.guild.id}`, kanal.id)
@@ -56,7 +56,7 @@ const ayarlandı = new discord.MessageEmbed()
 .setColor("#f6ff00")
 .setDescription(` Hoş geldin kanalı ${kanal} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL())
-.setFooter(`Spallers`)
+.setFooter(`BRK`)
 message.channel.send(ayarlandı)
   
 }
