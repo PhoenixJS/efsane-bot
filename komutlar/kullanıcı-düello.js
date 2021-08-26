@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const db = require('croxydb');
-869251332010299392
+const ayarlar = require("../ayarlar.json")
 const { stripIndents } = require('common-tags');
 const { randomRange, verify } = require('../util/Util.js');
 

@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const data = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async (client, message, args) => {
   
-  if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(`Bu komutu kullanabilmek için **Üyeleri Banla** yetkisine sahip olmalısın!`);
+  if (!message.member.hasPermission("MANAGE_MESSAEGS")) return message.reply(`Bu komutu kullanabilmek için **Mesajları Yönet** yetkisine sahip olmalısın!`);
   
   
   

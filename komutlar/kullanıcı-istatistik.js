@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const moment = require("moment");
 const db = require('croxydb');
+const ayarlar = require("../ayarlar.json")
 const os = require("os");
 require("moment-duration-format");
 
@@ -70,7 +71,7 @@ if(message.author.id != "627803211348312065") return message.channel.send(bakim)
     .setThumbnail(client.user.avatarURL())
   .setImage("")
     .addField("» **İşletim Sistemi**", `\`\`${os.platform()}\`\``)
-    .addField("**➥ Linkler**", "[<a:kral:778787824018653205> Davet Linki](https://discord.com/oauth2/authorize?client_id=869251332010299392&scope=bot&permissions=8)\n[<a:kral:778787824018653205> Destek Sunucu](https://discord.gg/3T5SHUD)\n[Website= YAKINDA]()");
+    .addField("**➥ Linkler**", "**[Davet Linki](https://discord.com/oauth2/authorize?client_id=869251332010299392&scope=bot&permissions=8)**\n **[Destek Sunucu](https://discord.gg/kqaBAxkkuX)**\n**[Website= YAKINDA]()**");
   return message.channel.send(msg);
 };
 

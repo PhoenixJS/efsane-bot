@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const data = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async (client, message, args) => {
 if(!args[0]) return message.channel.send(new Discord.MessageEmbed()
 .setTitle('Bir hata oldu!')

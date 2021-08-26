@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const db = require('croxydb');
+const ayarlar = require("../ayarlar.json")
 const ms = require("ms");
 exports.run = (client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)

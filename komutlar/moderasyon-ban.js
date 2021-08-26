@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const db = require('croxydb');
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async(client, message, args) => {
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
@@ -49,7 +49,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
     .setTitle('Kişi banlandı')
     .addField(' Yetkili', `${message.author.tag}`)
     .addField('Banlanan kişi', user)
-    .addField('<:ban:778787183842426900> Sebep', sebep)
+    .addField(' Sebep', sebep)
     client.channels.cache.get(banlog).send(embed)
        })
     })
