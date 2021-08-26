@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
   .addField('İşte Destek Sunucum',"[Destek Sunucusu](https://discord.gg/kqaBAxkkuX)")
   .setFooter('Üzgünüm...')
   .setImage('https://lh3.googleusercontent.com/proxy/gAN4I19oqqabXd_VIiwg5or-ITh4XxJTRNJA1ot0EIHPiBpxC74Atj4wNIcFes1N3VcE8WnOk6fIN29BChqNbj4lj9dIF2jiI7MBV6U8v842LA')
-if(message.author.id != "477189482206986240") if(message.author.id != "523218862766948362") return message.channel.send(bakim)
+if(message.author.id != "627803211348312065") if(message.author.id != "523218862766948362") return message.channel.send(bakim)
 
 }
   let soyisim = args.slice(0).join(" ");

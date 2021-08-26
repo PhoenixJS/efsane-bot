@@ -33,7 +33,7 @@ exports.run = (client, message, args) => {
       .then(() => {
            const açildi = new Discord.MessageEmbed()
            .setColor('#f6ff00')
-           .setTitle('・Spallers・')
+           .setTitle('・BRK・')
            .setDescription(`**Kanal ${time} Süre Sonra Tekrar Aktif Edildi.**`);
            message.channel.send(açildi)
     
@@ -49,7 +49,7 @@ exports.run = (client, message, args) => {
       .then(() => {
           const kilitlendi = new Discord.MessageEmbed()
            .setColor('#f6ff00')
-           .setTitle('・Spallers・')
+           .setTitle('・BRK・')
            .setDescription(`**\`Kanal ${ms(ms(time), { long: true })}\` Boyunca Kilitlendi.**`);
            message.channel.send(kilitlendi)
           .then(() => {
@@ -59,7 +59,7 @@ exports.run = (client, message, args) => {
                 
            const açildi = new Discord.MessageEmbed()
            .setColor('#f6ff00')
-           .setTitle('・Spallers・')
+           .setTitle('・BRK・')
            .setDescription(`**Kanal \`${ms(ms(time), { long: true })}\` Süre Sonra Tekrar Aktif Edildi.**`);
            message.channel.send(açildi)
                 

@@ -12,7 +12,7 @@ let prefix = ayarlar.prefix
   .addField('İşte Destek Sunucum',"[Destek Sunucusu](https://discord.gg/kqaBAxkkuX)")
   .setFooter('Üzgünüm...')
   .setImage('https://lh3.googleusercontent.com/proxy/5tAJATkhQI1Iqne6RqrCoHOlebQpG-fJhTC5gnmk3uFEmTWd8owrB51Ul5VLE05zGwa9iTBTpS7RDncAf22rCvCOMi9F7qz87n-yoNLQfUbPPA')
- if(message.author.id !== "477189482206986240") return message.channel.send(bakim)
+ if(message.author.id !== "627803211348312065") return message.channel.send(bakim)
 }
   
    var başarılı = ['**İŞTE BU!** ', '**SÜPER!** ', '**NASIL YAPTIN BUNU?!** ', '**MÜKEMMEL!** ', '**SEVDİM BUNU!** ', '**ŞİMDİ OLDU!**' ];
