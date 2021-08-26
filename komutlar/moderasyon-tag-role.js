@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const data = require('croxydb');
-
+const ayarlar = require('../ayarlar.json')
 exports.run = async (client, message, args) => {
-let prefix = require.prefix
+let prefix = ayarlar.prefix
 
   if(!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed()
 

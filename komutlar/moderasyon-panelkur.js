@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const db = require('croxydb')
+const ayarlar = require("../ayarlar.json")
 const fynx = require
 exports.run = async (client, message) => {
 let prefix = fynx.prefix

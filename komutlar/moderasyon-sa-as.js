@@ -1,7 +1,8 @@
 const db = require('croxydb')
 const Discord = require('discord.js')
-
+const ayarlar = require("../ayarlar.json")
 exports.run = async (bot, message, args) => {
+let prefix = ayarlar.prefix
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -23,7 +24,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
 }
 
   if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(':no_entry: Bu komudu kullanabilmek için `Sunucuyu Yönet` yetkisine sahip olmalısın!')
-  if (!args[0]) return message.channel.send(':no_entry: Sa-as yazısını açmak için; `s*sa-as aç veya kapat`')
+  if (!args[0]) return message.channel.send(`:no_entry: **Sa-as yazısını açmak için; ** \`${prefix}sa-as\` **aç** veya **kapat**`)
 
   if (args[0] == 'aç') {
     db.set(`saas_${message.guild.id}`, 'açık')

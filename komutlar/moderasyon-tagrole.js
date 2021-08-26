@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const data = require('croxydb')
-
+const ayarlar = require('../ayarlar.json')
 exports.run = async (client, message, args) => {
-let prefix = require.prefix
+let prefix = ayarlar.prefix
 
 message.channel.send(new Discord.MessageEmbed()
 .setColor('#f6ff00')

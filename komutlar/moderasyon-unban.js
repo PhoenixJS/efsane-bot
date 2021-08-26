@@ -1,7 +1,9 @@
 const Discord = require('discord.js');
 const db = require('croxydb')
+const ayarlar = require('../ayarlar.json')
 const client = new Discord.Client();
 exports.run = (client, message, args, member ) => {
+
     let karaliste = db.fetch(`ckaraliste.${message.author.id}`)
  const westraben = new Discord.MessageEmbed()
  .setColor("#f6ff00")
@@ -45,7 +47,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   if (!user) {
     const bid = new Discord.MessageEmbed()
     .setColor('#f6ff00')
-    .setDescription('**Banı kaldırılacak kişinin ID numarasını yazmalısın!**\n Doğru Kullanım:`s*unban idnumarası sebep`')
+    .setDescription(`**Banı kaldırılacak kişinin ID numarasını yazmalısın!**\n Doğru Kullanım:${prefix}unban İD sebep`)
    .setTimestamp() 
     .setFooter(`BRK Ban Sistemi`)
    return message.channel.send(bid).catch(console.error);
@@ -63,7 +65,7 @@ if(message.author.id != "477189482206986240") return message.channel.send(bakim)
   const embed = new Discord.MessageEmbed()
     .setColor('#f6ff00')
     .setTimestamp()
-    .setDescription('**Bir Kullanıcının Yasağı Kaldırıldı** <a:tmdir:778774341357797378>')
+    .setDescription('**Bir Kullanıcının Yasağı Kaldırıldı** ')
     .addField('Yasağı Kaldırılan Kullanıcı:', `<@!${user}>`,true)
     .addField('Yasağı Kaldıran Yetkili:', `<@!${message.author.id}>`,true)
     .addField('Yasağı Kaldırma Sebebi:', reason,false)
