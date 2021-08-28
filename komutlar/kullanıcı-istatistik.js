@@ -28,7 +28,7 @@ if(message.author.id != "627803211348312065") return message.channel.send(bakim)
     .setColor("#f6ff00")
     .setFooter(client.user.tag, client.user.avatarURL())
   .addField(
-  "» **Sahibim**","<@627803211348312065>"
+  "» **Sahibim**","<@751717933700349972>"
   )
     .addField(
       "» **Bellek kullanımı**",
@@ -60,6 +60,11 @@ if(message.author.id != "627803211348312065") return message.channel.send(bakim)
       client.channels.cache.size.toLocaleString(),
       true
     )
+    .addField(
+      "» **Komut Sayısı**",
+      client.commands.size(),
+      true
+     )
     .addField("» **Discord.JS sürüm**", "v" + Discord.version, true)
     .addField("» **Node.JS sürüm**", `${process.version}`, true)
     .addField("» **Ping**", client.ws.ping + " ms", true)
