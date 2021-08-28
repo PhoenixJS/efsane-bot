@@ -62,7 +62,7 @@ if(message.author.id != "627803211348312065") return message.channel.send(bakim)
     )
     .addField(
       "» **Komut Sayısı**",
-      client.commands.size(),
+      client.commands.size,
       true
      )
     .addField("» **Discord.JS sürüm**", "v" + Discord.version, true)
