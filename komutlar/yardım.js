@@ -30,8 +30,8 @@ let eklenti = new Discord.MessageEmbed()
 .setColor('#f6ff00')
 .addField( `**╔═══════════◥◣❖◢◤════════════╗**`,
     ` **║ Bilgilendirme.**
-**║ [Botu Davet Et](https://discord.com/oauth2/authorize?client_id=778778531018571776&scope=bot&permissions=8)**
-**║ [Destek Sunucusu](https://discord.gg/aloysha)**
+**║ [Botu Davet Et](https://discord.com/api/oauth2/authorize?client_id=877628391031988266&permissions=261993005055&scope=bot)**
+**║ [Destek Sunucusu](https://discord.gg/tahsineren)**
 **║ [Bot Sitesi]()**
 **╚═══════════◥◣❖◢◤════════════╝**
    `)
