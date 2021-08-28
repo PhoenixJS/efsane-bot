@@ -32,7 +32,7 @@ let eklenti = new Discord.MessageEmbed()
     ` **║ Bilgilendirme.**
 **║ [Botu Davet Et](https://discord.com/api/oauth2/authorize?client_id=877628391031988266&permissions=261993005055&scope=bot)**
 **║ [Destek Sunucusu](https://discord.gg/tahsineren)**
-**║ [Bot Sitesi]()**
+**║ [Bot Sitesi](https://brkbot.glitch.me/)**
 **╚═══════════◥◣❖◢◤════════════╝**
    `)
 .addField(`<a:Cizgi__Kayıt Komutları__`,` \`${prefix}kayıt\``,true)

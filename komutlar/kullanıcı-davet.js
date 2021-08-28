@@ -9,7 +9,7 @@ exports.run = (client, message) => {
 
 **[Bot Davet](https://discord.com/api/oauth2/authorize?client_id=877628391031988266&permissions=261993005055&scope=bot)**
 **[Destek Sunucusu](https://discord.gg/tahsineren)** 
-**[Bot Sitesi]()**
+**[Bot Sitesi](https://brkbot.glitch.me)**
 
 
 
