@@ -35,7 +35,7 @@ let eklenti = new Discord.MessageEmbed()
 **║ [Bot Sitesi](https://brkbot.glitch.me/)**
 **╚═══════════◥◣❖◢◤════════════╝**
    `)
-.addField(`<a:Cizgi__Kayıt Komutları__`,` \`${prefix}kayıt\``,true)
+.addField(` __Kayıt Komutları__`,` \`${prefix}kayıt\``,true)
 .addField(` __Seviye Komutları__`,` \`${prefix}seviye\` `,true)
 .addField(` __Yetkili Komutları__`,` \`${prefix}moderasyon\` `,true)
 .addField(` __Logo Komutları__`,` \`${prefix}logo\` `,true)
@@ -46,7 +46,7 @@ let eklenti = new Discord.MessageEmbed()
 .addField(` __Davet Komutları__`,` \`${prefix}davet\` `,true)
 .addField(` __Profil Komutları__`,` \`${prefix}profil\` `,true)
 .addField(` __Kullanıcı Komutları__`,` \`${prefix}kullanıcı\` `,true)
-.addField(` __Nsfw Komutları__`,` \`${prefix}nsfw\` `,true)
+.addField(` __Nsfw Komutları__`,` \`${prefix}nsfw(yakında),\` `,true)
 .addField(` __Hazır Sunucu Komutları__`,` \`${prefix}sunucukur\` `,true)
 
 .addField(`╔═══════════◥◣❖◢◤════════════╗`,
