@@ -3,7 +3,7 @@ const db = require("croxydb");
 const ayarlar = require('../ayarlar.json')
 exports.run = async(cclient, message, args) => {
 
-if(message.author.id !== "627803211348312065") return message.channel.send(" Bu komutu sadece sahiplerim kullanabilir.")
+if(message.author.id !== "751717933700349972") return message.channel.send(" Bu komutu sadece sahiplerim kullanabilir.")
 
 let cuser = message.mentions.users.first() || cclient.users.cache.get(args[0])
 if(!cuser) return message.channel.send(" Bir kullanıcı belirtmelisin!")
